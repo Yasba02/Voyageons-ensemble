@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Components</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+<style>
+  .articleimage{
+    margin-bottom: 75px !important;
+    padding-left: 15px !important;
+  }
+  p{
+    padding-left: 15px !important;
+    padding-right: 0px !important;
+    margin-right: 0px !important;
+  }
+ 
+ BODY{
+  background-color: rgb(178, 202, 178);
+ }
+ .navbar {
+      background-color: transparent !important;
+      z-index: 1000;
+      position: relative;
+    }
+
+    .navbar-nav .nav-link,
+    .navbar-brand {
+      color: black !important;
+    }
+
+    /* BUTTON STYLES */
+    .btn {
+      background-color: #d3d6db;
+      color: black;
+    }
+
+    .btn:hover {
+      background-color: #a7bcb9;
+    }
+
+    .dropdown-item {
+      background-color: #dfcdc3;
+    }
+
+    .dropdown-divider {
+      background-color: #975a5e;
+    }
+    .heading{
+      padding-left: 30px !important;
+    }
+    @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(100px); /* Start 100px to the right */
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0); /* End at the original position */
+    }
+  }
+
+  .fade-in-right {
+    animation: fadeInRight 2s ease-out; /* Animation duration is 2 seconds */
+  }
+  .fade-in-right-3 {
+    animation: fadeInRight 3s ease-out; /* Animation duration is 2 seconds */
+  }
+  .fade-in-right-4 {
+    animation: fadeInRight 4s ease-out; /* Animation duration is 2 seconds */
+  }
+
+  @keyframes fadeInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-100px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* Class to apply the animation */
+    .fade-in-left {
+      animation: fadeInLeft 2s ease-out;
+   
+    }
+
+    .fade-in-left-3 {
+      animation: fadeInLeft 3s ease-out;
+    }
+    .fade-in-left-4 {
+      animation: fadeInLeft 4s ease-out;
+    
+    }
+    @keyframes fadeInDown {
+  from {
+    opacity: 0;                 /* Start invisible */
+    transform: translateY(-100px); /* Start 100px above its original position */
+  }
+  to {
+    opacity: 1;                 /* Fully visible */
+    transform: translateY(0);   /* End at its original position */
+  }
+}
+
+.fade-in-down {
+  animation: fadeInDown 1s ease-out; /* Animation duration is 2 seconds */
+}
+</style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg fade-in-down">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="./Homepage.ejs"> <img src="./images/airplane.svg" height="30">Voyageons Ensemble</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="./Homepage.ejs">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./Aboutus.html">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contactus.html">Contact us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./publish.html">Publish</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Destinations
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item active" href="./Africa.html"><img src="./images/airplane-fill.svg">Africa</a></li>
+              <li><a class="dropdown-item" href="./America.html"> <img src="./images/airplane-fill.svg">America</a></li>
+              <li><a class="dropdown-item" href="./Asia.html"> <img src="./images/airplane-fill.svg">Asia</a></li>
+              <li><a class="dropdown-item" href="./Europe.html"> <img src="./images/airplane-fill.svg">Europe</a></li>
+              <li><a class="dropdown-item" href="./Oceania.html"> <img src="./images/airplane-fill.svg">Oceania</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+<div class="row g-5">
+    <div class="col-md-8">
+
+      <h3 class="heading pb-4 mb-4 fst-italic border-bottom fade-in-right-3">
+        Community publications
+      </h3>
+
+      <article class="blog-post">
+        <h2 class="heading display-5 link-body-emphasis mb-1 fade-in-right-3">Best sunrise hikes</h2>
+        
+        <p class="blog-post-meta fade-in-left-3"> 26/08/2024 by <a href="#">Tommy Smith</a></p>
+        <img class="articleimage col-lg-10 col-md-9 col-sm-12 col-12 fade-in-left-3" src="./images/Hikingarticle.webp">
+        <p>It’s hard to beat the satisfaction of hiking to a good sunrise spot. You get the accomplishment of achieving a good viewpoint, then enjoy a stunning display of warm colors and the peace of being awake while the rest of the world still sleeps. Don’t get me wrong, it’s always difficult to wake up well before dawn, but once you do, there are never any regrets about the miles hiked before breakfast.  
+            In this post, I will discuss some of the best sunrise hikes across the country, starting with my favorite, the Cadillac Mountain sunrise in Acadia National Park, Maine.  
+        </p>
+      
+        <p>Less than 100 miles from the eastern most point in the US, Cadillac mountain in Acadia is one of the first places in the country to experience the sunrise. What makes the Cadillac Mountain sunrise truly unique to behold is the sun rising above a backdrop of the Atlantic ocean in the background, while in the foreground several islands and a peninsula emerge out of the harbor like whales breaching for air. Heck, if you are lucky enough, you might just might see a real whale too! It’s truly a view that is like no other.
+         </p>
+          <p>
+            Fair warning, this is a very popular spot during peak season and throughout much of the year due to its accessibility. There is a park road leading to a parking lot just a few minute walk from the overlook, allowing many people to experience the Cadillac Mountain sunrise with ease.          </p>
+          <img class="articleimage col-lg-10 col-md-9 col-sm-12 col-11 fade-in-left-3" src="./images/hikingarticle02.webp">
+          <p>
+            Many trails lead to vantage points for the Cadillac Mountain sunrise, but none is more iconic than the Cadillac South Ridge Trail. On the way up, a forested path leads you past a meadow-like area with a relaxing small pond to take a break. Once beyond this, you reach the exposed granite ridgeline above the trees, providing you with spectacular views every way you look. The way down is a totally different experience that will leave your mouth gaping in awe as you realize the terrain you climbed up in the dark just a few hours earlier.          </p>
+          <p>
+            This out and back trail is approximately 7 miles roundtrip, taking anywhere from 2 to 4 hours to hike, and gains 1,500 feet in elevation. It begins and ends very close to the Blackwoods Campground, a great accommodation option, with additional parking along both sides of the road near the trailhead.          </p>
+          
+          <p>
+            Pro tip: You can easily make this out and back trail into a loop. Also, there is the Island Explorer bus service which makes getting back to your car a snap if you want to start and end at different points. This service usually runs mid June to mid October each year.</p>          
+        <p>
+            However, if you want to avoid the crowds, my recommendation is the South Kaibab Trail. Just under a mile from the trailhead, you reach Ohh Aah Point where you are met for the first time with expansive views to the east, leaving you to ohh and ahh in pure bliss. Beginning here, you truly start to understand the actual depth of this enormous canyon, a perspective that you can’t quite experience from the rim. Getting here can take as little as 20 minutes, or as many as 30 to 45 minutes if going at a more leisurely pace.  </p>          <p>
+            Driving along the south rim of the Grand Canyon gives you access to a number of stellar viewpoints for the sunrise, including Mather Point, Yaki Point, Yavapai Point, Hopi Point, Pima Point, Grandview Point, the list goes on. You honestly can’t go wrong with any of them, and many are also great for viewing the sunset too.  </p>       
+        <p>
+            If you continue, which I highly recommend, you can enjoy sunrise hues across colorful walls and find notable stops like Cedar Ridge and Skeleton Point further down. But don’t underestimate this trail. It is notably hotter lower in the canyon than at the rims and with thousands of feet of elevation change, be sure to bring more water and snacks than you think you will need, saving plenty of energy for that steep climb back out. </p>
+        <p>
+           Like the Grand Canyon, Yosemite National Park is home to many great sunrise spots in the valley a few steps from the car. The most popular of these viewpoints is of course Tunnel View, the setting for the most iconic photos of El Capitan and Half Dome. Other equally great and less crowded options include Valley View and Sentinel Bridge. Keep in mind that the sun only lines up with the valley in the summer, so more memorable spectacles can be found at high ground during other times of the year, such as at the fan favorite Glacier Point.</p>        
+
+        <p>
+            A hidden gem I want to highlight as one of the best sunrise views in Yosemite, is the summit of lesser-known Eagle Peak. Eagle Peak is situated on the north side of the valley just passed the famed El Capitan. From its peak, you can experience astonishing views of the lush valley and Merced River meadows below, while Half Dome in all its glory stand across the way. The sun rises just beyond this, sending its warm light over everything in its path.
+        </p>
+        <p>
+            Getting up there is not for the faint of heart. With the summit sitting at 7,783ft, you will gain almost 4,000 feet of elevation in approximately 6 miles (one way) from the Yosemite Falls Trailhead the top of Eagle Peak. In exchange you will be able to enjoy stellar views of the valley much of the way, hike through refreshing pine forest, and pass the towering and powerful Lower and Upper Yosemite Falls.
+        </p>
+        <p>
+            This can be done in an epic day, taking approximately 8 hours to complete roundtrip (and with a very early start to reach the summit for sunrise), or I recommend breaking the journey up into 2 days. After obtaining a wilderness permit to camp at the top of Eagle Peak, pack for an overnight backpacking trip and enjoy all the benefits of a more leisurely pace. After some stargazing and a quiet night’s rest away from the crowded valley,  roll out of your tent early to witness the spectacle.  
+        </p>
+        <p>
+            Sunrises in the Appalachian Mountains of the southeast are often accompanied by seas of low silky cloud cover perfect for amplifying and reflecting sunrise light. Along the Blue Ridge Parkway in Pisgah National Forest near Asheville, North Carolina sits Black Balsam Knob, a popular peak providing 360 degree views. Being a bald, there are no trees upon its summit due to historic clear-cutting practices and locomotive fires, so it is a great spot for both sunrise and sunset.
+        </p>
+        <p>
+            This highly sought out peak is a short 0.7 mile rocky uphill hike along the Art Loeb Trail. Want to see more? Continue on to Tennent Mountain or even further to Flower Knob in the Shining Rock Wilderness to keep enjoying the views. There are also many options to make this hike into a loop.
+
+            Pro tip: Fall colors give this sunrise show an extra splendor if you time it right in October.  
+        </p>
+        <p>
+            So what are you waiting for, go enjoy a sunrise today (or perhaps early tomorrow morning).  Whether it’s a Cadillac Mountain sunrise or one just up the road from where you live, the beginning of a new day is a beautiful thing to behold. Set your alarm clock, pack your headlamp, and be like the sun and rise early. There is no better way to show you’re not taking this life for granted. 
+        </p>
+        <nav class="blog-pagination" aria-label="Pagination">
+        <a class="btn btn-outline-primary rounded-pill" href="#">Older</a>
+        <a class="btn btn-outline-secondary rounded-pill disabled" aria-disabled="true">Newer</a>
+      </nav>
+
+    </div>
+
+    <div class="col-md-4">
+      <div class="position-sticky" style="top: 2rem;">
+        <div class="p-4 mb-3 bg-body-tertiary rounded fade-in-right-3">
+          <h4 class="fst-italic">About the writer</h4>
+          <p class="mb-0">Originally from a small town in northeastern Massachusetts, Tommy grew up exploring the mountains of New England on his snowboard. He later discovered his passion for nature, hiking, and rock climbing in college at Clark University, where he studied Geography and Environmental Science and pursued research that utilized satellite imagery to support conservation and climate change initiatives. Living in Colorado further cultivated his love for exploring the backcountry and protecting these pristine and natural landscapes. Not only did he get to hike on the weekends but he also got to do it on the job while working for the Bureau of Land Management undergoing vegetation surveys. Learning about new cultures, food, languages and ways of life also greatly excites Tommy, and he enjoys attaining such knowledge through travel, whether it be domestically or internationally. His favorite travel experience to date was spending a summer road tripping around the Western US exploring the many national parks and living out of his car and tent. When he is not adventuring in the great outdoors, 
+            Tommy enjoys reading fiction, playing boardgames, exploring ways to live more sustainably, and questioning social norms.</p>
+        </div>
+
+        <div>
+          <h4 class="fst-italic">Recent posts</h4>
+          <ul class="list-unstyled">
+            <li>
+              <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+                <div class="col-lg-8">
+                  <h6 class="mb-0">Example blog post title</h6>
+                  <small class="text-body-secondary">January 15, 2024</small>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+                <div class="col-lg-8">
+                  <h6 class="mb-0">This is another blog post title</h6>
+                  <small class="text-body-secondary">January 14, 2024</small>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+                <div class="col-lg-8">
+                  <h6 class="mb-0">Longer blog post title: This one has multiple lines!</h6>
+                  <small class="text-body-secondary">January 13, 2024</small>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="p-4">
+          <h4 class="fst-italic">Archives</h4>
+          <ol class="list-unstyled mb-0">
+            <li><a href="#">March 2021</a></li>
+            <li><a href="#">February 2021</a></li>
+            <li><a href="#">January 2021</a></li>
+            <li><a href="#">December 2020</a></li>
+            <li><a href="#">November 2020</a></li>
+            <li><a href="#">October 2020</a></li>
+            <li><a href="#">September 2020</a></li>
+            <li><a href="#">August 2020</a></li>
+            <li><a href="#">July 2020</a></li>
+            <li><a href="#">June 2020</a></li>
+            <li><a href="#">May 2020</a></li>
+            <li><a href="#">April 2020</a></li>
+          </ol>
+        </div>
+
+        <div class="p-4">
+          <h4 class="fst-italic">Elsewhere</h4>
+          <ol class="list-unstyled">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Facebook</a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+  crossorigin="anonymous"></script>
+
+</body>
+</html>

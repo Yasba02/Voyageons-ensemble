@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Components</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+<style>
+  .articleimage{
+    margin-bottom: 75px !important;
+    padding-left: 15px !important;
+
+  }
+  p{
+    padding-left: 15px !important;
+    padding-right: 0px !important;
+    margin-right: 0px !important;
+  }
+
+ BODY{
+  background-color: rgb(186, 210, 234);
+ }
+ .navbar {
+      background-color: transparent !important;
+      z-index: 1000;
+      position: relative;
+    }
+
+    .navbar-nav .nav-link,
+    .navbar-brand {
+      color: black !important;
+    }
+
+    /* BUTTON STYLES */
+    .btn {
+      background-color: #d3d6db;
+      color: black;
+    }
+
+    .btn:hover {
+      background-color: #a7bcb9;
+    }
+
+    .dropdown-item {
+      background-color: #dfcdc3;
+    }
+
+    .dropdown-divider {
+      background-color: #975a5e;
+    }
+    .heading{
+      padding-left: 30px !important;
+    }
+    @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(100px); /* Start 100px to the right */
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0); /* End at the original position */
+    }
+  }
+
+  .fade-in-right {
+    animation: fadeInRight 2s ease-out; /* Animation duration is 2 seconds */
+  }
+  .fade-in-right-3 {
+    animation: fadeInRight 3s ease-out; /* Animation duration is 2 seconds */
+  }
+  .fade-in-right-4 {
+    animation: fadeInRight 4s ease-out; /* Animation duration is 2 seconds */
+  }
+
+  @keyframes fadeInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-100px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* Class to apply the animation */
+    .fade-in-left {
+      animation: fadeInLeft 2s ease-out;
+   
+    }
+
+    .fade-in-left-3 {
+      animation: fadeInLeft 3s ease-out;
+    }
+    .fade-in-left-4 {
+      animation: fadeInLeft 4s ease-out;
+    
+    }
+    @keyframes fadeInDown {
+  from {
+    opacity: 0;                 /* Start invisible */
+    transform: translateY(-100px); /* Start 100px above its original position */
+  }
+  to {
+    opacity: 1;                 /* Fully visible */
+    transform: translateY(0);   /* End at its original position */
+  }
+}
+
+.fade-in-down {
+  animation: fadeInDown 1s ease-out; /* Animation duration is 2 seconds */
+}
+</style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg fade-in-down">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="./Homepage.ejs"> <img src="./images/airplane.svg" height="30">Voyageons Ensemble</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="./Homepage.ejs">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./Aboutus.html">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contactus.html">Contact us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./publish.html">Publish</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Destinations
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item active" href="./Africa.html"><img src="./images/airplane-fill.svg">Africa</a></li>
+              <li><a class="dropdown-item" href="./America.html"> <img src="./images/airplane-fill.svg">America</a></li>
+              <li><a class="dropdown-item" href="./Asia.html"> <img src="./images/airplane-fill.svg">Asia</a></li>
+              <li><a class="dropdown-item" href="./Europe.html"> <img src="./images/airplane-fill.svg">Europe</a></li>
+              <li><a class="dropdown-item" href="./Oceania.html"> <img src="./images/airplane-fill.svg">Oceania</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+<div class="row g-5">
+    <div class="col-md-8">
+      <h3 class="heading pb-4 mb-4 fst-italic border-bottom fade-in-right-3">
+        Community publications
+      </h3>
+
+
+      <article class="blog-post">
+        <h2 class="heading display-5 link-body-emphasis mb-1 fade-in-right-3">What to do in Milano in 3 days</h2>
+        
+        <p class="blog-post-meta fade-in-left-3"> 30/08/2023 by <a href="#">Arélie and Yann </a></p>
+        
+        <p>
+            Located in the Lombardy region, Milan is the world capital of design and fashion. Italy’s financial center and dynamic metropolis, it is also an important cultural city. 
+            How can I visit Milan in 3 days? We’ve put together a detailed itinerary to help you discover what to do in Milan!
+        </p>
+        <img src="./images/milano.webp" class="articleimage col-lg-10 col-md-9 col-sm-12 col-11 fade-in-left-3">
+        <p>
+            I think Milan is one of the most expensive cities to stay in Italy. During my weekend, I stayed in 2 different establishments. A quality hotel in the center and an apartment a little further out (20 min walk from the hypercenter and the Duomo) but less expensive and with nice facilities.
+           <br/>
+            – Hotel Milano Castello: ideally located, you can walk to almost all the city’s places of interest. The decor is stylish, the rooms are modern and the buffet breakfast is included in the rate.
+            <br/>
+            – Giovenale Milan Navigli: this establishment offers fairly modern apartments just a 20-minute walk (or 10-minute streetcar ride) from the Duomo. I really liked the facilities, such as the gym and games room with self-service ping pong and billiards. 
+            It’s also very close to the Officina, one of the best places in town for a drink (I’ll tell you about it at the end of the article).
+        </p>
+        <p>
+            As Milan is located in the north of the country, temperatures are fairly mild, unlike in the south. 
+            Of course, to avoid the crowds and especially the heat, we recommend that you visit Milan from March to June and from September to November, 
+            but you can enjoy this city almost all year round.
+        </p>
+        <p>
+            How much will it cost to visit Milan in 3 days? <br/>
+            – Flights France – Milan: €150 per person on average, but you can also take the train from Paris and Lyon for a slightly higher price.
+            <br/>
+            – Airport – city center: Milan has 3 airports. The closest is Linate. It’s 20 minutes by Metro 4 from the city center. If you arrive at Malpensa, the largest, you’ll need to take a train for 45 minutes at a cost of 13€.
+            <br/>
+            – Hotels: €100-300 per night for a 3-star or even 4-star hotel, depending on the season.
+            <br/>
+            – Restaurants: €40 per day per person for 2 meals
+            <br/>
+            Total = approx. €1,000 for a 3-day stay in Milan, i.e. €500 per person, excluding activities / visits.
+             
+
+        </p>
+        <img src="./images/milano06.jpg" class="articleimage col-lg-10 col-md-9 col-sm-12 col-11 fade-in-left-3">
+        <p>
+            The advantage of this city is that many things can be done on foot! For the more out-of-the-way places, you can buy single tickets for 2.20€. You can also buy a 3-day metro card for 13€ if you want to save time or energy.
+
+            Or, for a complete tour of the city without too much effort, you can opt for a panoramic bus tour or a Segway tour!
+        </p>
+        <p>
+            For price, language and ease of use, we recommend that you pre-book your activities on one of the following 2 sites:
+            <br/>
+            – Civitatis
+            <br/>
+            – GetYourGuide
+            <br/>
+            If you wish, you can book a free guided tour of Milan. It will be conducted by a local English-speaking guide.  
+
+        </p>
+        <p>
+            Day 1: The historic center <br/>
+            Milan Cathedral <br/>
+            Known as the Duomo de Milano, or Milan Cathedral, this building is a must-see in the historic center. It’s one of the largest Gothic cathedrals in Europe, and offers a breathtaking view of the city if you climb to the top.
+            <br/>
+            Tickets are available for both the entrance and the terrace.<br/>
+            The Victor-Emmanuel II Gallery <br/>
+            Located right next to the cathedral, in the Piazza del Duomo, this gallery is one of Milan’s must-sees, with its luminous stained-glass windows and immense dome. Even though it’s a luxury shopping mall with high-end bars and restaurants, 
+            the place is an architectural gem and attracts many tourists. <br/>
+            Museum of the Twentieth Century <br/>
+            The museo del Novecento is a museum dedicated to the art of the XXᵉ century located in the piazza del Duomo, within the Palazzo dell’Arengario. I went when it opened (even 10 minutes before to make sure I was the first) because I wanted to have access to the piano room with a view of the cathedral completely on my own. The museum itself is also very beautiful and interesting. A word of advice: head straight for the top floor to enjoy the magnificent view from the piano room, 
+            and take your time to visit the rest on the way down.<br/>
+            Teatro alla Scala – Opéra de Milan <br/>
+            To the north of the gallery is the Milan Opera House, a grandiose building with 3 opera halls. Even if the exterior is not the most attractive, you’ll be seduced by the hushed, gilded interior where many Italian operas have been performed. 
+            You can also visit the adjoining museum to see opera costumes and period instruments.<br/>
+            Santa Maria delle Grazie church <br/>
+            Not far from the Duomo Milano, this UNESCO World Heritage Site is also known for housing one of its most famous works: Leonardo da Vinci’s Last Supper, depicting the last supper of Jesus Christ and his apostles. 
+            You’ll need to book your ticket several weeks in advance to be sure of catching a glimpse of this painting.<br/>
+            The historic center <br/>
+            Take a stroll through the narrow streets of the historic center and admire the refined architecture of the district’s buildings, 
+            cobbled streets and numerous statues and fountains. For a truly Milanese experience, try a real Italian gelato at Ciacco! I was won over by the pistachio, Lemon & Cheese and Crema de Bretagna gelato.
+            <br/>
+            Where to eat / drink <br/>
+            For a breathtaking view of the cathedral, I recommend Bar Terrazza Duomo 21. Prices are indeed much more expensive than elsewhere 
+            (€20 for a Spritz…), but the view is sublime, especially at sunset. <br/>
+
+        </p>
+        <img src="./images/milano05.jpg" class="articleimage col-lg-10 col-md-9 col-sm-12 col-11 fade-in-left-3">
+        <p>
+            Day 2: Downtown Milan <br/>
+            Are you a fan of Italian cities? Discover our article Rome in 3 days
+            <br>            
+            Le Quadrilatère de la Mode <br/>
+            For fashion lovers, these 4 streets (Via Montenapoleone, Via della Spiga, Via Sant’Andrea and Via Manzoni) are a must-see in Milan, home to the city’s most prestigious boutiques. Here you’ll find all the luxury jewelry stores and the big names in haute-couture, such as Louis Vuitton, Versace, Hermès, Gucci and more.
+            <br/>
+            Sforzesco Castle & Arch of Peace <br/>
+            Located at Metro Cairoli, the Castello Sforzesco (or “Sforza Castle”) is a 15th-century medieval fortification that today houses several exhibitions and museums. The building has been enlarged over the centuries and is quite impressive in size. I also recommend a stroll through the gardens to the Arco della Pace, a triumphal arch designed in 1838.
+            <br/>
+            The Villa Real in Milan <br/>
+            The Villa Royale of Milan, or Villa Belgiojoso Bonaparte, is a villa built in 1796. It now houses Milan’s Gallery of Modern Art. I really recommend taking advantage of the 24,000 m2 of English gardens surrounding the building.
+            <br/>
+            Where to eat / drink <br/>
+            Obviously, I couldn’t come to Milan without trying a real Italian pizza. Head to Pizza Am for some truly incredible pizzas at a reasonable price (maximum €12 per pizza). Even if it doesn’t look like much from the outside, this restaurant is well known among locals for its pizzas.
+            <br/>
+
+        </p>
+        <p> 
+        <img src="./images/milano03.avif" class="articleimage col-lg-10 col-md-9 col-sm-12 col-11 fade-in-left-3">
+            Day 3: The Milan area <br/>
+            The Navigli district <br/>
+            In the south of the city lies the Naviglis district, once home to the many canals built by Leonardo da Vinci that criss-crossed the city. Today, only two main canals remain. The bohemian atmosphere is really pleasant, with lots of little addresses and even a flea market on Sundays.
+            <br/>
+            The Navigli district is also home to lively weekend markets selling fresh produce, handicrafts and antiques. It’s an ideal place to stroll, relax by the water or enjoy the lively atmosphere of Milanese life.
+            <br/>
+            For a truly immersive experience, why not take an hour’s leisurely cruise on a river boat.
+            <br/>
+            The Prada Foundation<br/>
+            If you love contemporary art, I highly recommend a visit to the Prada Foundation for an awe-inspiring experience. Admission is €12 per person (free for under-18s). You’ll be able to admire several very different exhibitions.
+            <br/>
+            Personally, I wasn’t too keen on them! But it’s still an emblematic place to visit in Milan.
+            <br/>
+            The Leonardo da Vinci Science Museum <br/>
+            Located to the west of the city, this museum was created in the heart of a former monastery and houses a large part of Leonardo da Vinci’s work. Here, you’ll be able to observe numerous models showcasing the ingenuity of this great Italian master of many trades. You’ll also find impressive military machines and measuring instruments.
+            <br/>
+            Numerous works by other Italian engineers and scientists are also on display. These include works on aeronautics, naval engineering, railways, automotive engineering and telecommunications.
+            <br/>
+            This is a huge museum, so allow half a day to enjoy all the works. Book your admission ticket (€10) in advance to avoid queuing on site.
+            <br/>
+            Where to eat / drink <br/>
+            I highly recommend spending an evening in Navigli, where you can enjoy a Spritz on the banks of the canal. From 6pm onwards, many bars offer Aperitivo with drinks + snacks (sometimes all you can eat). We especially recommend the Zog terrace, where you can enjoy the sunlight at the end of the day.
+            <br/>
+            I had a drink at the Luca & Andrea bar, which offered a platter of cheeses, olives and sun-dried tomatoes, but above all misters on the terrace (perfect during the heatwave). The atmosphere is very friendly and the prices are right for the canal-side location.
+            <br/>
+            I then went to Lasagna Factory for lasagne lovers. Portions are quite small, but with a 50% discount on The Fork, prices were reasonable. And you also get an all-you-can-eat offer for €25 per person.
+            <br/>
+            If you want to enjoy a cocktail in an original setting, I recommend l’Officina. It’s a magnificent lounge bar in a former hangar. The decor is really top-notch and the bar inside is magnificent. I chose to have a drink at the little guinguette they own just opposite (Nino). The cocktails were really original and very good!
+            <br/>
+            I hope I’ve helped you with this article on What to do in Milan in 3 days! Feel free to ask me your questions in comments and share the article if you enjoyed it.
+        </p>
+        <nav class="blog-pagination" aria-label="Pagination">
+        <a class="btn btn-outline-primary rounded-pill" href="#">Older</a>
+        <a class="btn btn-outline-secondary rounded-pill disabled" aria-disabled="true">Newer</a>
+      </nav>
+
+    </div>
+
+    <div class="col-md-4">
+      <div class="position-sticky" style="top: 2rem;">
+        <div class="p-4 mb-3 bg-body-tertiary rounded fade-in-right-3">
+          <h4 class="fst-italic">About the writer</h4>
+          <p class="mb-0"> Aurélie and Yann created together the : amoureux-du-monde.com blog where they share articles on destinations they've 
+        been to.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="fst-italic">Recent posts</h4>
+          <ul class="list-unstyled">
+            <li>
+              <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+                <div class="col-lg-8">
+                  <h6 class="mb-0">Example blog post title</h6>
+                  <small class="text-body-secondary">January 15, 2024</small>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+                <div class="col-lg-8">
+                  <h6 class="mb-0">This is another blog post title</h6>
+                  <small class="text-body-secondary">January 14, 2024</small>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+                <div class="col-lg-8">
+                  <h6 class="mb-0">Longer blog post title: This one has multiple lines!</h6>
+                  <small class="text-body-secondary">January 13, 2024</small>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="p-4">
+          <h4 class="fst-italic">Archives</h4>
+          <ol class="list-unstyled mb-0">
+            <li><a href="#">March 2021</a></li>
+            <li><a href="#">February 2021</a></li>
+            <li><a href="#">January 2021</a></li>
+            <li><a href="#">December 2020</a></li>
+            <li><a href="#">November 2020</a></li>
+            <li><a href="#">October 2020</a></li>
+            <li><a href="#">September 2020</a></li>
+            <li><a href="#">August 2020</a></li>
+            <li><a href="#">July 2020</a></li>
+            <li><a href="#">June 2020</a></li>
+            <li><a href="#">May 2020</a></li>
+            <li><a href="#">April 2020</a></li>
+          </ol>
+        </div>
+
+        <div class="p-4">
+          <h4 class="fst-italic">Elsewhere</h4>
+          <ol class="list-unstyled">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Facebook</a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+  crossorigin="anonymous"></script>
+
+</body>
+</html>

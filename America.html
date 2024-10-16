@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Components</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+ 
+  <style>
+   .navbar {
+      background-color: transparent !important;
+      z-index: 1000;
+      position: relative;
+    }
+
+    .navbar-nav .nav-link,
+    .navbar-brand {
+      color: black !important;
+    }
+
+    /* BUTTON STYLES */
+    .btn {
+      background-color: #d3d6db;
+      color: black;
+    }
+
+    .btn:hover {
+      background-color: #a7bcb9;
+    }
+
+    .dropdown-item {
+      background-color: #dfcdc3;
+    }
+
+    .dropdown-divider {
+      background-color: #975a5e;
+    }
+
+    /* BACKGROUND STYLES */
+    body  { background-image: url('./images/America\ background.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 100vh; 
+    margin: 0;
+    background-attachment: fixed !important;
+    }
+
+    /* SAFARI ARTICLE */
+    #newyorkarticle {
+      background-color: rgb(221, 238, 238)!important;
+      margin: 50px;
+      padding: 30px;
+      margin-top: 300px !important;
+    }
+
+    #newyorkimage {
+      width: 300px;
+      height: 250px;
+      float: right;
+      padding: 30px !important;
+      
+    }
+
+    #newyorktitle {
+      font-size: 45px !important;
+    }
+
+    #newyorkdescription {
+      font-size: 20px !important;
+    }
+
+    /* CARD STYLES */
+    .card-img-top {
+      height: 200px !important;
+      width: 100% !important; /* **Made image width 100% for responsiveness** */
+      object-fit: cover; /* **Ensure the image fits within the card** */
+    }
+
+    .card {
+      margin-top: 30px !important;
+    }
+
+    .lobster-regular {
+      font-family: "Lobster", sans-serif;
+      font-size: 90px;
+      text-align: center;
+    
+      color: azure;
+    }
+
+    /* BUTTON STYLES */
+    #cardbtn {
+      background-color: #925d60;
+    }
+
+    /* **Responsive background size for smaller screens** */
+    @media only screen and (max-width: 768px) {
+      body {
+        background-attachment: scroll;
+      }
+
+      .lobster-regular {
+        font-size: 50px; /* Smaller heading on mobile */
+      }
+    }
+    .active{
+      background-color: #532d2f !important;
+    }
+
+    @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(100px); /* Start 100px to the right */
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0); /* End at the original position */
+    }
+  }
+
+  .fade-in-right {
+    animation: fadeInRight 2s ease-out; /* Animation duration is 2 seconds */
+    padding-bottom: 300px !important;
+  }
+
+  .fade-in-right-4 {
+    animation: fadeInRight 4s ease-out; /* Animation duration is 2 seconds */
+  }
+
+  @keyframes fadeInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-100px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* Class to apply the animation */
+    .fade-in-left {
+      animation: fadeInLeft 2s ease-out;
+      padding-top: 300px !important;
+    }
+
+    
+    .fade-in-left-4 {
+      animation: fadeInLeft 4s ease-out;
+    
+    }
+    @keyframes fadeInDown {
+  from {
+    opacity: 0;                 /* Start invisible */
+    transform: translateY(-100px); /* Start 100px above its original position */
+  }
+  to {
+    opacity: 1;                 /* Fully visible */
+    transform: translateY(0);   /* End at its original position */
+  }
+}
+
+.fade-in-down {
+  animation: fadeInDown 1s ease-out; /* Animation duration is 2 seconds */
+}
+  </style>
+
+  </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg fade-in-down">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./Homepage.ejs"> <img src="./images/airplane.svg" height="30">Voyageons Ensemble</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="./Homepage.ejs">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="./Aboutus.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./contactus.html">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="./publish.html">Publish</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Destinations
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="./Africa.html"><img src="./images/airplane-fill.svg">Africa</a></li>
+                  <li><a class="dropdown-item active" href="./America.html"> <img src="./images/airplane-fill.svg">America</a></li>
+                  <li><a class="dropdown-item" href="./Asia.html"> <img src="./images/airplane-fill.svg">Asia</a></li>
+                  <li><a class="dropdown-item" href="./Europe.html"> <img src="./images/airplane-fill.svg">Europe</a></li>
+                  <li><a class="dropdown-item" href="./Oceania.html"> <img src="./images/airplane-fill.svg">Oceania</a></li>
+                 
+                </ul>
+              </li>
+              
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>  
+      <div>
+        <h1 class="lobster-regular fade-in-left">Continent: </h1>
+        <h1 class="lobster-regular fade-in-right">America</h1>
+      </div>
+    
+      <div class="container">
+        <div id="newyorkarticle">
+          <img id="newyorkimage" class="fade-in-right-4" src="./images/newyork.jpg">
+          <h1 id="newyorktitle" class="fade-in-left-4">My First Time In New York City - Blog of the Things </h1>
+          <p id="newyorkdescription" class="fade-in-left-4"> A city of endless possibilities, high energy, and great diversity, 
+            New York City had always been on the top of my bucket list and I knew I would love NYC before I even visited it (thanks to all the TV shows set in NYC).
+         </p>
+          <p class="lead mb-0"><a href="./newyorkarticle.html" class="text-body-emphasis fw-bold">Continue reading...</a></p>
+        </div>
+      </div>
+    
+      <div class="container">
+        <div class="row">
+          
+          
+           <!-- Second Card -->
+        <div class="col-lg-4 col-md-6 col-12 mb-4">
+          <div class="card">
+            <a href="#">
+              <img src="./images/hiking.jpg" class="card-img-top fade-in-right-4" alt="An image of two people hiking">
+            </a>
+            <div class="card-body">
+              <h5 class="card-title fade-in-left-4">Best sunrise hikes</h5>
+              <p class="card-text fade-in-left-4">It’s hard to beat the satisfaction of hiking to a good sunrise spot. You get the accomplishment of achieving a good viewpoint
+                then enjoy a stunning display of warm colors and the peace of being awake while the rest of the world...
+              </p>
+              <a id="cardbtn" href="./Hikingarticle.html" class="btn btn-primary">Read Me</a>
+            </div>
+          </div>
+        </div>
+    
+        
+        <!-- Second Card -->
+        <div class="col-lg-4 col-md-6 col-12 mb-4">
+          <div class="card">
+            <a href="#">
+              <img src="./images/Niagara.jpg" class="card-img-top fade-in-right-4" alt="An image of Niagara Falls">
+            </a>
+            <div class="card-body">
+              <h5 class="card-title fade-in-left-4">Visit Niagara Falls in 24 hours</h5>
+              <p class="card-text fade-in-left-4">You only have one day planned on your itinerary to visit Niagara Falls during your road trip in Canada?
+
+                Not a problem ! Here is an itinerary that will allow you to visit the must-sees of the Niagara Falls area, in just 24 hours.</p>
+              <a id="cardbtn" href="./Niagarafallsarticle.html" class="btn btn-primary">Read Me</a>
+            </div>
+          </div>
+        </div>
+    
+          <!-- Third Card -->
+          <div class="col-lg-4 col-md-6 col-12 mb-4">
+            <div class="card">
+              <a href="#">
+                <img src="./images/Los angelos.avif" class="card-img-top fade-in-right-4" alt="An image of Los Angelos">
+              </a>
+              <div class="card-body">
+                <h5 class="card-title fade-in-left-4">Take a Road Trip up California’s Wild North Coast</h5>
+             
+                <p class="card-text fade-in-left-4">California's northern coast isn't the most accessible part of the state—and that's a big part of its appeal. Time seems to slow down in this part of the world, 
+                  creating an idyllic environment for road trippers ...</p>
+                
+                  <a id="cardbtn" href="./Californiaarticle.html" class="btn btn-primary">Read Me</a>
+                </div>
+              </div>
+            </div>
+          </div> <!-- End of Row -->
+        </div> <!-- End of Container -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

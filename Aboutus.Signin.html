@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Components</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Playwrite+CU&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script&family=Playwrite+CU&display=swap" rel="stylesheet">
+  <style>
+    
+    .navbar {
+      background-color: transparent !important;
+      z-index: 1000;
+      position: relative;
+    }
+.navbar-nav .nav-link {
+  color: white !important; /* Ensure navbar links remain visible */
+}
+
+.navbar-brand {
+  color: white !important; /* Ensure brand name remains visible */
+}
+
+.btn {
+  background-color: #d3d6db;
+  color: black;
+}
+
+.btn:hover {
+  background-color: #a7bcb9;
+}
+
+.dropdown-item {
+  background-color: #dfcdc3;
+}
+
+.dropdown-divider {
+  background-color: #975a5e;
+}
+.playwrite-cu-heading {
+  font-family: "Playwrite CU", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style :normal;
+  color: black;
+  
+}
+.anton-regular-About-us {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: x-large;
+  margin-top: 50px;
+  color: black;
+  
+}
+.social-media{
+    margin-top: 70px;
+    margin-left: 40px;
+}
+
+body{
+    background-image: url('./images/clouds.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 100vh; 
+    margin: 0;
+    background-attachment: fixed !important;
+}
+
+@keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(100px); /* Start 100px to the right */
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0); /* End at the original position */
+    }
+  }
+
+  .fade-in-right {
+    animation: fadeInRight 2s ease-out; /* Animation duration is 2 seconds */
+   
+  }
+
+ 
+
+  @keyframes fadeInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-100px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* Class to apply the animation */
+    .fade-in-left {
+      animation: fadeInLeft 2s ease-out;
+     
+    }
+@keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(100px); /* Start below the normal position */
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0); /* Move to the original position */
+      }
+    }
+
+    /* Class to apply the animation */
+    .fade-in-up {
+      animation: fadeInUp 2s ease-out;
+    }
+
+    @keyframes fadeInDown {
+  from {
+    opacity: 0;                 /* Start invisible */
+    transform: translateY(-100px); /* Start 100px above its original position */
+  }
+  to {
+    opacity: 1;                 /* Fully visible */
+    transform: translateY(0);   /* End at its original position */
+  }}
+  .fade-in-down {
+  animation: fadeInDown 1s ease-out; /* Animation duration is 2 seconds */
+  }
+    
+
+  </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg fade-in-down">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./welcomepage.html"> <img src="./images/airplane.svg" height="30">Voyageons Ensemble</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="./Homepage.Signin.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="./Aboutus.Signin.html">About</a>
+              </li>
+              <li class="nav-item"></li>
+                <a class="nav-link" href="./contactUs.Signin.html">Contact</a>
+              </li>
+              <li class="nav-item"></li>
+                <a class="nav-link " href="./Publish.Signin.html">Publish</a>
+            </li>
+              
+            </ul>
+
+          </div>
+        </div>
+      </nav>  
+<div class="px-4 py-5 my-5 text-center">
+    <h1 class="playwrite-cu-heading fade-in-left">About "Voyeagons Ensemble"</h1>
+    <div class="col-lg-6 mx-auto">
+        <p class="anton-regular-About-us fade-in-right"> I'm Yasmin the owner of this blog website, here I share my experiences as a traveler 
+            and other members experiences as well after reading and evaluating their articles.
+            In our community we value respect and diversity-acceptance, so you'll be reading articles of travelers from all over the world 
+            diving in the beauty of our planet through their adventures. 
+            Since sharing is caring here are our social media accounts don't forget to subscribe and like our posts ! 
+            We really appreciate your colaboration and looking forward to connect with you </p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <a href="https://www.instagram.com/">
+            <img class="social-media fade-in-up" src="./images/instagram.svg" alt="Instagram link" height="100" width="100" >
+          </a>
+          <a href="https://www.facebook.com/?locale=fr_FR">
+              <img class="social-media fade-in-up" src="./images/facebook.svg" slt="Facebook link" height="100" width="100">
+          </a>
+          <a href="https://x.com/home?lang=fr">
+              <img class="social-media fade-in-up" src="./images/twitter-x.svg" slt="Twitter-X link" height="100" width="100">
+          </a>
+      </div>
+    </div>
+  </div>
+ 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

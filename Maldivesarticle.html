@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Components</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+<style>
+  .articleimage{
+    margin-bottom: 75px !important;
+    padding-left: 15px !important;
+
+  }
+  p{
+    padding-left: 15px !important;
+    padding-right: 0px !important;
+    margin-right: 0px !important;
+  }
+
+ BODY{
+  background-color: #bbe4e9;
+ }
+ .navbar {
+      background-color: transparent !important;
+      z-index: 1000;
+      position: relative;
+    }
+
+    .navbar-nav .nav-link,
+    .navbar-brand {
+      color: black !important;
+    }
+
+    /* BUTTON STYLES */
+    .btn {
+      background-color: #d3d6db;
+      color: black;
+    }
+
+    .btn:hover {
+      background-color: #a7bcb9;
+    }
+
+    .dropdown-item {
+      background-color: #dfcdc3;
+    }
+
+    .dropdown-divider {
+      background-color: #975a5e;
+    }
+    .heading{
+      padding-left: 30px !important;
+    }
+    @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(100px); /* Start 100px to the right */
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0); /* End at the original position */
+    }
+  }
+
+  .fade-in-right {
+    animation: fadeInRight 2s ease-out; /* Animation duration is 2 seconds */
+  }
+  .fade-in-right-3 {
+    animation: fadeInRight 3s ease-out; /* Animation duration is 2 seconds */
+  }
+  .fade-in-right-4 {
+    animation: fadeInRight 4s ease-out; /* Animation duration is 2 seconds */
+  }
+
+  @keyframes fadeInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-100px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* Class to apply the animation */
+    .fade-in-left {
+      animation: fadeInLeft 2s ease-out;
+   
+    }
+
+    .fade-in-left-3 {
+      animation: fadeInLeft 3s ease-out;
+    }
+    .fade-in-left-4 {
+      animation: fadeInLeft 4s ease-out;
+    
+    }
+    @keyframes fadeInDown {
+  from {
+    opacity: 0;                 /* Start invisible */
+    transform: translateY(-100px); /* Start 100px above its original position */
+  }
+  to {
+    opacity: 1;                 /* Fully visible */
+    transform: translateY(0);   /* End at its original position */
+  }
+}
+
+.fade-in-down {
+  animation: fadeInDown 1s ease-out; /* Animation duration is 2 seconds */
+}
+</style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg fade-in-down">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="./Homepage.ejs"> <img src="./images/airplane.svg" height="30">Voyageons Ensemble</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="./Homepage.ejs">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./Aboutus.html">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contactus.html">Contact us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./publish.html">Publish</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Destinations
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item active" href="./Africa.html"><img src="./images/airplane-fill.svg">Africa</a></li>
+              <li><a class="dropdown-item" href="./America.html"> <img src="./images/airplane-fill.svg">America</a></li>
+              <li><a class="dropdown-item" href="./Asia.html"> <img src="./images/airplane-fill.svg">Asia</a></li>
+              <li><a class="dropdown-item" href="./Europe.html"> <img src="./images/airplane-fill.svg">Europe</a></li>
+              <li><a class="dropdown-item" href="./Oceania.html"> <img src="./images/airplane-fill.svg">Oceania</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+<div class="row g-5">
+    <div class="col-md-8">
+
+      <h3 class="heading pb-4 mb-4 fst-italic border-bottom fade-in-right-3">
+        Community publications
+      </h3>
+
+      <article class="blog-post">
+        <h2 class="heading display-5 link-body-emphasis mb-1 fade-in-right-3">My In-Depth Guide to Experiencing the Maldives on a Budget</h2>
+        
+        <p class="blog-post-meta fade-in-left-3"> 27/08/2024 by <a href="#">Nomadic matt</a></p>
+        
+        <p>
+            The maldives conjure up images of pristine beaches, reef-ringed atolls, and luxurious
+             bungalows on the water where lucky guests can observe fish through glass floors and jump into the sea from their balcony.
+        </p>
+        <img src="./images/maldives02.jpg" class="articleimage col-lg-10 col-md-9 col-sm-12 col-11 fade-in-left-3">
+        <p>
+            This island nation has always been on my “bucket list,” so when I decided to visit Sri Lanka and Dubai, the Maldives was a logical and obvious addition to my itinerary.
+        </p>
+        <p>
+            In 2009, the Maldivian government allowed locals to open their own guesthouses and restaurants to tourists. Whereas before, travelers were limited to the resort islands, 
+            now they can visit and stay on any local island they choose. Suddenly, homestays, hotels, and guesthouses started popping up.
+        </p>
+        <p>
+            It was a momentous shift in policy that finally allowed locals a piece of the economic pie.
+
+            Though I wanted to experience everyday life, the aforementioned idyllic images rippled through my mind. There was no way I could miss a chance to experience that kind of luxury.
+            Splitting my nine-day visit into two parts, I decided to spend four days in a resort and five days on the “real” islands.
+        </p>
+
+        <img src="./images/maldives07.jpg" class="articleimage col-lg-10 col-md-9 col-sm-12 col-11 fade-in-left-3">
+        <p>
+            With a Dubai friend in tow, I landed at the Cinnamon Hakuraa Huraa resort, 150 kilometers south of the capital, Malé. Like all resorts, the hotel is on a private island that boasts overwater bungalows, 
+            a restaurant, bar, spa, and tours. Like most resorts here, meals and drinks are included in the cost of the room.
+        </p>
+        <p>
+            Cinnamon was on the lower end of the price spectrum, costing me $356 USD per night. While not super budget-friendly, it was a lot cheaper than the other resorts. For example, the Park Hyatt was $850 USD per night, the Taj was $1,050 USD, 
+            the W was $1,300 USD, St. Regis was $1,600 USD, and the Four Seasons was a whopping $2,000 USD per night!
+        </p>
+        <p>
+            Unless you learn how to use points and miles, a visit here can be prohibitively expensive.
+        </p>
+        <p>
+            As I was itching for an overdue vacation and work detox, my visit was just what the doctor ordered: a tropical island with limited Internet and a friend whose job it was to keep me from working. <br/>
+
+            I spent my days trying not to get a sunburn on the beach, reading books (I highly recommend The Year of Living Danishly by Helen Russell), drinking wine, stuffing my face, and then retiring for more reading or a movie. <br/>
+
+           Life on the island was easy. In the resort bubble, you don’t have to worry about getting around, meals, or what to do. <br/>
+
+           It was a vacation. </br>
+        </p>
+        <img src="./images/maldives04.jpg" class="articleimage col-lg-10 col-md-9 col-sm-12 col-11 fade-in-left-3">
+        <p>
+            The staff was super friendly, they knew how to make a good drink, and there was always food around. Meals were buffet style (unless you paid extra for the romantic crab restaurant or the lunchtime cooking class, which I did. <br/>
+            Taking advantage of some of the hotel’s tours, we went dolphin watching (so many dolphins!), snorkeled each day, and visited a couple of the nearby islands.
+           <br/>
+            Since resorts in the country are geared toward families or couples, there were few solo travelers or non-couples outside the dive resorts. My friend and I were the only non-couple on the island.
+            <br/>
+            I found there wasn’t a lot of guest interaction but since everyone there was on vacation, I wasn’t too surprised.
+            <br/>>
+             After four days, my friend and I were both a bit ready to move on. I can only take vacation life for a few days before I get bored. The high life was the relaxing opulence that I thought it would be, but I was itching to see the real Maldives, to experience life on the local islands, and to talk to a few locals.
+ 
+        </p>
+        <p>
+            After returning to Malé and seeing my friend off at the airport, I hopped into a speedboat and headed to Maafushi, ground zero for the Maldives’ burgeoning independent travel industry, to start my island-hopping adventure.
+        <br/>
+            It was a horrible place. I hope to never return.
+        <br/>
+            Maafushi, once a sleepy little island, is now the victim of uncontrolled development.
+        <br/>
+           Hotels were going up left and right, boats were making frequent trips to Malé to pick up tour groups, and there was just one small overcrowded and overbuilt beach. The few restaurants on the island catered mostly to tourists, and outside the area that had been cleaned up for visitors, it was one trash-covered dump.
+        <br/>
+       I could see the writing on the wall: this place was going to be the next Ko Phi Phi. As a guesthouse owner on another island said, “Soon there will be no more locals there. They will simply rent out their land and move to Malé.”
+        </p>
+       <p>
+        But Maafushi is good for a few things: diving, snorkeling, and acting as a launching pad to prettier, quieter islands like Gulhi and Fulidhoo.
+        <br/>
+        After a couple of days, I escaped to Mahibadhoo. Kristin, our amazing solo female travel writer, stayed there a few years ago, and so I was eager to visit and check out the Amazing Noovilu, praised as “possibly the best guesthouse in the Maldives.” (It was really nice. A little expensive for my taste but the service, food, and activities offered by the staff were resort-quality. Incredible attention to detail and I recommend staying there.)
+        <br/>
+        Unlike Maafushi, I liked Mahibadhoo.
+       </p>
+       <img src="./images/maldives03.jpg" class="articleimage col-lg-10 col-md-9 col-sm-12 col-11 fade-in-left-3">
+       <p>
+        It was clean (local women volunteer to clean the island once a week), and the buildings were more colorful, featuring a rainbow of pastel-colored structures. There was more life here too (I watched local soccer games each night). Overall, the vibe was just nicer.
+        <br/>
+       The island, despite having speedboat access to Malé, has escaped (for now) the mass development of Maafushi. Though it doesn’t have a “bikini beach” (as the beaches for foreigners are called), there is good snorkeling right offshore (which is what I did), and it’s a launching pad for day trips to deserted atolls, sandbars, and quieter islands like Dhanbidhoo, Kalhaidhoo, and Isdhoo.
+       <br/>
+       Though the islands the locals inhabit are adding guesthouses, they frequently aren’t set up for tourists. Ferry service is infrequent to all but a couple of the islands, and most don’t have many restaurants, or even beaches to lay on. There are a couple of reasons for this.
+       <br/>
+       First, bikini beaches exist for tourists. The Maldives is a Muslim country and, while there are public beaches, you need to be covered up for them. Most of the local islands don’t have white sandy beaches, so many built special ones just for the tourists that are hidden from view and visitors can be more scantily dressed (hence the bikini name).
+       <br/>
+       Secondly, “eating out” isn’t a thing in the Maldives. Locals mostly cook for themselves. There are cafes but few restaurants. You usually eat at the guesthouses, where the owners cook up meals (included in the price) for guests. However, you can get a lot of good food this way as many guesthouses serve curried fish, rice, and other local delicacies. The fare is simple but very tasty.
+       <br/>
+       And, while the communities are still trying to figure out how to deal with tourism, I was sad to leave and wish I had more time to explore the nooks and crannies of the atolls. Everyone here was friendly and it would have been nice to get to dig deeper into local life and culture.
+       <br/>
+       Ferries require planning (and don’t always come) – The Maldives’ atolls are served by a series of ferries from Malé. Most cost $2-5 USD, however, their schedule is unreliable. I was meant to take one, but it never arrived.
+       <br/>
+       Many only travel once a day, so if one doesn’t come, you’ll have to fork over money for a speedboat ($25-75 USD) or wait for the next day’s departure.
+       <br/>
+      When you are visiting the Maldives, research the ferries beforehand so you know when and where you can go next. Island hopping is very difficult without planning. I messed up by not looking at the ferry system before I arrived; as a result, I missed a few islands I wanted to visit. I wrongly assumed there would be frequent ferries between the islands, but I was sorely mistaken.
+      <br/>
+      Inter-island ferry schedules can be found here.
+      <br/>
+      Speedboats are your friend – From Malé, you can take speedboats to a few of the nearby capital islands of surrounding atolls. They cost $25-75 USD but also leave infrequently, usually once a day (Maafushi is the only island I found with multiple speedboat departures). If you’re not on a tight budget and want to save time, grab a speedboat.
+      <br/>
+      There is no alcohol – As the Maldives is a Muslim country, you can’t get alcohol anywhere except on the resort islands which have a special exemption.
+      <br/>
+      Flying is not cheap – Flying is incredibly expensive here. Flights from Malé to surrounding atolls can cost up to $350 USD each way. Skip it.
+      <br/>
+      Take lots of USD – Though the Maldives has its own currency (the rufiyaa), US dollars are widely accepted and you often get a better price if you pay in USD. This varies from one restaurant or shop to another, so I carried both currencies with me and paid in whatever currency had a lower price. (Though you’re usually talking the difference of $.50 cents, so don’t stress too much.)
+      <br/>
+      However, Maldivian ATMs charge hefty fees (upwards of $6.50 USD) per withdrawal. Taking cash or making one large withdrawal eliminates or reduces those fees (and so does having a bank that reimburses those fees).
+      <br/>
+      And don’t worry about having that much money on your person, because the Maldives is very safe. No one is going to steal all that cash. I never once felt uneasy about having lots of money on me.
+      <br/>
+      At resorts, everything will be charged to your credit card so make sure you have a travel card so you can earn points!    
+      <br/>
+      Is it good for solo travelers? <br/>
+      Yes, if you just want to read, relax, and focus on you. <br/>
+
+      While you’ll see a lot of travelers in Malé heading to dive boats or bouncing from island to island, it’s all friends, couples, and families. Despite the cheap cost of travel, the Maldives is still not on the solo traveler’s radar.
+      <br/>
+      However, in the last few years, there’s been an increase in Couchsurfing hosts (Malé alone has 1740 hosts in 2023). So if you’re traveling solo, this could be a good option to meet locals. Plus, you can find Couchsurfing meetups as well.
+      <br/>
+      Furthermore, there are yoga surf camps that include accommodation and some meals and certainly attract solo travelers looking for a small community to hang with while in the Maldives .
+      <br/>
+      Is the Maldives cheap? <br/>
+      It can be! Though they import a lot of goods, if you stick to local ferries, guesthouses, and local food (fish, rice, curry), you can get by for under $75 USD a day (even less if you are sharing accommodation). This does not include things like airfare and travel insurance though.
+      <br/>
+      In my four days, my biggest expense was the $120 USD I paid to rent an entire speedboat back to Malé when my ferry didn’t show up. Beyond that, I found the islands to be quite the bargain!
+      <br/>
+      We think of the Maldives as a budget-busting, high-end place but a visit to the islands don’t have to be. The country is cheaper than some of the popular destinations in the Caribbean or even Southeast Asia!
+      <br/>
+      One day I hope to return and spend more time island-hopping. There’s more I want to see and do here.
+      <br/>
+     I highly recommend visiting the Maldives before the islands become too overdeveloped, the beaches get swallowed up by the sea (climate change and coral bleaching were both hot topics with the locals I spoke with), or the world catches on to how budget-friendly the country really is.
+    
+    </p>
+
+        <nav class="blog-pagination" aria-label="Pagination">
+        <a class="btn btn-outline-primary rounded-pill" href="#">Older</a>
+        <a class="btn btn-outline-secondary rounded-pill disabled" aria-disabled="true">Newer</a>
+      </nav>
+
+    </div>
+
+    <div class="col-md-4">
+      <div class="position-sticky" style="top: 2rem;">
+        <div class="p-4 mb-3 bg-body-tertiary rounded fade-in-right-3">
+          <h4 class="fst-italic">About the writer</h4>
+          <p class="mb-0"> Nomadic Matt is a traveler who owns a travel blog website : nomadicmatt.com. He aims to help people travel on a budget by sharing
+            travel tips in his platform.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="fst-italic">Recent posts</h4>
+          <ul class="list-unstyled">
+            <li>
+              <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+                <div class="col-lg-8">
+                  <h6 class="mb-0">Example blog post title</h6>
+                  <small class="text-body-secondary">January 15, 2024</small>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+                <div class="col-lg-8">
+                  <h6 class="mb-0">This is another blog post title</h6>
+                  <small class="text-body-secondary">January 14, 2024</small>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+                <div class="col-lg-8">
+                  <h6 class="mb-0">Longer blog post title: This one has multiple lines!</h6>
+                  <small class="text-body-secondary">January 13, 2024</small>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="p-4">
+          <h4 class="fst-italic">Archives</h4>
+          <ol class="list-unstyled mb-0">
+            <li><a href="#">March 2021</a></li>
+            <li><a href="#">February 2021</a></li>
+            <li><a href="#">January 2021</a></li>
+            <li><a href="#">December 2020</a></li>
+            <li><a href="#">November 2020</a></li>
+            <li><a href="#">October 2020</a></li>
+            <li><a href="#">September 2020</a></li>
+            <li><a href="#">August 2020</a></li>
+            <li><a href="#">July 2020</a></li>
+            <li><a href="#">June 2020</a></li>
+            <li><a href="#">May 2020</a></li>
+            <li><a href="#">April 2020</a></li>
+          </ol>
+        </div>
+
+        <div class="p-4">
+          <h4 class="fst-italic">Elsewhere</h4>
+          <ol class="list-unstyled">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Facebook</a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+  crossorigin="anonymous"></script>
+
+</body>
+</html>

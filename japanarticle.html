@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Components</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+<style>
+  .articleimage{
+    margin-bottom: 75px !important;
+    padding-left: 15px !important;
+
+  }
+  p{
+    padding-left: 15px !important;
+    padding-right: 0px !important;
+    margin-right: 0px !important;
+  }
+
+ BODY{
+  background-color: rgb(186, 210, 234);
+ }
+ .navbar {
+      background-color: transparent !important;
+      z-index: 1000;
+      position: relative;
+    }
+
+    .navbar-nav .nav-link,
+    .navbar-brand {
+      color: black !important;
+    }
+
+    /* BUTTON STYLES */
+    .btn {
+      background-color: #d3d6db;
+      color: black;
+    }
+
+    .btn:hover {
+      background-color: #a7bcb9;
+    }
+
+    .dropdown-item {
+      background-color: #dfcdc3;
+    }
+
+    .dropdown-divider {
+      background-color: #975a5e;
+    }
+    .heading{
+      padding-left: 30px !important;
+    }
+    @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(100px); /* Start 100px to the right */
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0); /* End at the original position */
+    }
+  }
+
+  .fade-in-right {
+    animation: fadeInRight 2s ease-out; /* Animation duration is 2 seconds */
+  }
+  .fade-in-right-3 {
+    animation: fadeInRight 3s ease-out; /* Animation duration is 2 seconds */
+  }
+  .fade-in-right-4 {
+    animation: fadeInRight 4s ease-out; /* Animation duration is 2 seconds */
+  }
+
+  @keyframes fadeInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-100px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* Class to apply the animation */
+    .fade-in-left {
+      animation: fadeInLeft 2s ease-out;
+   
+    }
+
+    .fade-in-left-3 {
+      animation: fadeInLeft 3s ease-out;
+    }
+    .fade-in-left-4 {
+      animation: fadeInLeft 4s ease-out;
+    
+    }
+    @keyframes fadeInDown {
+  from {
+    opacity: 0;                 /* Start invisible */
+    transform: translateY(-100px); /* Start 100px above its original position */
+  }
+  to {
+    opacity: 1;                 /* Fully visible */
+    transform: translateY(0);   /* End at its original position */
+  }
+}
+
+.fade-in-down {
+  animation: fadeInDown 1s ease-out; /* Animation duration is 2 seconds */
+}
+</style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg fade-in-down">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="./Homepage.ejs"> <img src="./images/airplane.svg" height="30">Voyageons Ensemble</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="./Homepage.ejs">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./Aboutus.html">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contactus.html">Contact us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./publish.html">Publish</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Destinations
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item active" href="./Africa.html"><img src="./images/airplane-fill.svg">Africa</a></li>
+              <li><a class="dropdown-item" href="./America.html"> <img src="./images/airplane-fill.svg">America</a></li>
+              <li><a class="dropdown-item" href="./Asia.html"> <img src="./images/airplane-fill.svg">Asia</a></li>
+              <li><a class="dropdown-item" href="./Europe.html"> <img src="./images/airplane-fill.svg">Europe</a></li>
+              <li><a class="dropdown-item" href="./Oceania.html"> <img src="./images/airplane-fill.svg">Oceania</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+<div class="row g-5">
+    <div class="col-md-8">
+
+      <h3 class="heading pb-4 mb-4 fst-italic border-bottom fade-in-right-3">
+        Community publications
+      </h3>
+
+      <article class="blog-post">
+        <h2 class="heading display-5 link-body-emphasis mb-1 fade-in-right-3">My Tokyo travel Guide</h2>
+        
+        <p class="blog-post-meta fade-in-left-3"> by <a href="#">Anonymous</a></p>
+        
+        <p>Fresh from my twenty something hour flight journey home, I’ve never been so excited to write a travel piece.
+            I went to Tokyo for 7 days (not including travel days) and to say I had a jam-packed schedule would be an understatement, and on our return home I feel like we only barely scratched the surface of one of the most fascinating cities in the world. This guide is a full list of things you need, things I learned and what to put on your list. Now obviously I’m no expert when it comes to where to eat in such a vast city with countless restaurants and cafes, but I can tell you of a handful of places we tried and had some of the best meals we’ve had on our travels. 
+            I’ve broken this piece up into sections hoping to make it as easy as possible to follow and help with your own travel plans. Ok, let’s get started!
+        </p>
+        <img src="./images/japan01.jpg" class="articleimage col-lg-10 col-md-9 col-sm-12 col-11 fade-in-left-3">
+        <p>
+            We flew with Qatar Airways from Dublin – Doha – Haneda. With short stop-overs and really good service I would definitely suggest this airline for a long haul trip.
+
+            You can go direct from London but just an FYI the flights are a lot more expensive than going from Dublin. (More on flying tips below)
+        </p>
+        <p>
+            Japan does not have a tipping culture. For anything.
+            It is an expensive city,similar to Dublin (especially taxis)
+            Time differenceis 9 hours ahead, so prepare for some serious jet lag for the first few days.
+            Wi-Fi is essential for getting around, using google maps on your phone is the best way to efficiently use the subways and without it we would have been lost. I would strongly recommend picking up pocket Wi-Fi in the airport once you land to save your data roaming and potentially getting a nasty bill from your mobile provider when you get home.
+            Pasmo travel cardis something else you need to pick up once you land in the airport it’s your ticket pass for all Subway/JR lines/buses (super handy and you can top them up as you go in machines) We spent around 6,000 Yen in the week we were there which is around €40-50 and works out so much cheaper than paying as you go and we used the subway about 6-10 times a day.
+            You can pre-buy a Japan rail passonline before you even leave for your holiday, which you can use to get to Kyoto on the Bullet Train and the express trains to and from the airport’s (it will save you a lot of money if you plan on doing these things).
+            Pre booking I would say for certain experiences pre booking is essential like team lab borderless and certain Michelin restaurants if that’s your thing.
+            Airports with your booking I recommend making sure you get a flight into Haneda if possible because it’s much closer than Narita which is over an hour away. There are two airports in Tokyo and Haneda is the closet to the city (15- 20 minutes), so if you’re going to get a taxi it will cost a lot less (even though it’s still approx. €70 for a 15 minute drive) I told you they were expensive!A taxi from Narita can cost a whopping €350 which is why getting a Japan Rail Pass is a very good idea.
+            If you pre-book your taxi through booking.com to or from the airport you get a better deal. That’s what we did on the way back so check that out before you fly.
+            The weather this time of year ( March/April) is similar to Ireland with a lot less rain. Pack layers and jackets, comfortable walking shoes as you will clock up approx. 15 km a day and perhaps some compeed blister patches!
+            Cash always carry some cash as a lot of eateries are cash only, or machine cashiers. Particularly going into visitor sites/gardens you will need small change.
+        </p>
+        <p>
+            We broke our trip up in to 5 days in Tokyo, 1 in Kyoto and 1 out at Lake Kawaguchi. 
+            In the next few paragraphs I have listed our favourite things we did and maybe a few suggestions of how to plan it better!
+
+        </p>
+        <img src="./images/japan.jpg" class="articleimage col-lg-10 col-md-9 col-sm-12 col-11 fade-in-left-3">
+        <p>
+            What a sensory overload! It was everything I expected and like nowhere I’ve been before, it’s been uncorrupted by western culture and remains very much in its own bubble.
+
+            Luckily for me Zach has been to Tokyo twice before so he was able to pin point the best things to see on my short trip. Tokyo is one of those places that is just fantastic for wandering, which I highly recommend, but here’s a few things you should make time to see.
+            
+            Shibuya Crossing
+            The famous Shibuya crossing is a sight that has to be seen, head up to the Starbucks through the book store to get the best view of the mad rush of the city.
+        </p>
+        <p>
+            For a little taste of nature in the city, this park is beautiful to stroll around. There is a small cash fee to enter the park so make sure you have some change.
+            This is where you can get a look at some traditional Japanese gardens, visit the tea rooms and in general get out of the chaos for a little bit.
+        </p>
+        <p>
+            Put yourself in “Lost in translation” and visit the famous Park Hyatt. 
+            We didn’t have a reservation but decided to chance our arm anyway and  go up to the New York Grill and Bar for a drink. We went up at about 4.30 to be told its doesn’t open until 5. They put our names down and at 5 had a seat ready for us. I would suggest going early like us and waiting on the seats provided until 5 to get a window seat. We decided to wait downstairs in the café and get cake, which was so worth it but we didn’t get a window seat then. 
+            But after your drink definitely go down stairs and try the Japanese chestnut tart.
+        </p>
+        <p>
+            You have to check out the Tsukiji Fish Market during the day and head to Sushi Say for some Lunch time Sushi. It was the best Sushi we had, and we had a lot of sushi over there. 
+            It was so fresh and made to order in front of us. Put it down as a must on your lunchtime stop.
+        </p>
+        <p>
+            This has to be pre booked before you leave weeks in advance, it is an interactive visual experience that as it says is borderless. Each corner brings you on a journey to another “world” from moving lights to LED hanging walls. 
+            I would suggest going first thing when it opens because even if you have a ticket the queue is huge!
+        </p>
+        <p>
+            It’s perfect to explore both of these landmarks side by side, the Meiji shrine is located just beside the Yamanote JR line at Harajuku station. 
+            The Meiji shrine is dedicated to the defied spirits of Emperor Meiji and is surrounded by dense forestry and spacious walk paths in the middle of 
+            the hectic streets of Harajuku.
+
+            The shrine is a perfect place to escape the hustle and bustle of the streets and wander taking in the vast torii gates and forget the noise of traffic by 
+            replacing it with the calm sounds of nature. There’s also a chance you might get to see a traditional Japanese wedding and take part in shinto activities and 
+            make a wish by writing out on an ema
+        </p>
+        <p>
+            Once you have that done, it’s time to get back out and embrace the madness and sights of Harajuku, the area between Shibuya and Shinjuku that is known worldwide 
+            for its teenage culture and unique fashion. It also hosts a tonne of dessert and sweet shops to try out some traditional treats.
+        </p>
+        <p>
+            The shopping in Japan is as you would expect different to anywhere else, 
+            it’s the perfect place to pick up something individual even if it’s from your favourite brand. In Japan many well known brands have their own ranges exclusive to the Japanese market. As well as that they have some unbelievable second hand and vintage stores circulated around Harajuku area. Some shops I loved – United Arrows, 
+            Tokyu Hands, Beams, Flamingo and Chicago to name a few.
+        </p>
+        <p>
+            Make sure that you experience a traditional Japanese breakfast when you’re here. Other essentials include signature dishes like Ramen, 
+            Unagi, Fatty Tuna Nigiri, Udon, Katsu Curry, Matcha Tea and Chestnut Tart.
+        </p>
+        <p>
+            If you’re heading to Japan during end of March /April you will be in with a chance of seeing the once in a life time Cherry Blossom bloom of Japan that dot’s itself all over the city. However, there is a cost as tourist numbers (and prices) go up drastically during this time of the year. 
+            The best spots to see them in full bloom are Shinjuku Gardens, Ueno Park and the Meguro River.
+        </p>
+        <img src="./images/japan02.jpg" class="articleimage col-lg-10 col-md-9 col-sm-12 col-11 fade-in-left-3">
+        <p>
+            If you want to fully experience Kyoto I would definitely plan an overnight stay instead of doing just a day trip. 
+            There are so many things to see that a day just doesn’t do it justice. However, a flying visit can be done like this. Kyoto was once the capital of Japan and is situated on Honshu Island and is 450km west of Tokyo.
+             There is a bullet train from Tokyo every 15-20 minutes back and forth.
+        </p>
+        <p>
+            You can use your Japan Rail Passto get to Kyoto, the only downside is it’s not the fastest train, 
+            we got the Nozomi which is the fastest way of getting there, but the difference in train times is only about 30 minutes. These trains leave from Tokyo Station and Shinjuku Station and are very well signposted – I would check pre booking a day or two before to get reserved seats together. 
+            Note – there is no Wi-Fi but there are plug points for charging.
+        </p>
+        <p>
+            Once you get to Kyoto it’s important to mention taxies are considerably 
+            less expensive in comparison to Tokyo and the subway system is very comprehensive (once you have google maps) and your pasmo card will work here.
+        </p>
+        <p>
+            Fushimi Inari Shrine is a Shinto shrine in South Kyoto (only 2 stations from where you get off the bullet train). It’s famous for its thousands of vermilion Tori Gates leading up to Mt.Inari. For all my hikers out there this leads to a 2-3 hour hike, if you have time on your trip maybe it’s something you want to squeeze in. 
+            Another way you can get great views all across Kyoto is by following the trail for 35-40 minutes to Yotsutsuji Intersection
+        </p>
+        <p>
+            You’ll also find a lovely matcha tea stop along the trails of the tori gates looking out onto a Japanese style garden, 
+            if you haven’t tried matcha yet it’s a great place to start, it will wake you right up after the train ride.
+        </p>
+        <p>
+            In the Arashiyama region only a few stops on the train away from Inari, so I recommend visiting these two places one after the other.
+             Once you get off the train stop it’s about a 15 -20 minute walk to the start of bamboo grove, just follow the people! It’s famous for its towering bamboo walkways and attracts a lot of people. It’s impressive to see asmd definitely worth doing whilst you’re in Kyoto. On the route down we stumbled across a really nice Pizzeria owned by two Japanese girls called Lugara. We stopped for a drink after the walk and I have to say I’ve been dreaming about Pizza ever since because it looked so good.
+             We managed to flag down a taxi from outside there very easily to head to our next stop.
+        </p>
+        <p>
+            aka the famous golden Pavilion once belonging to Statesman’s Saionji Kintsune and converted into a Zen temple once he passed and dates all the way back to 1397. It’s a sight to see, the temple plated in gold reflected back off the pond in front surrounded by countless trees, little walk ways and beautiful bridges makes it seem almost other worldly. It’s nice to walk around and only takes 15-20 minutes to visit. There is a small charge to get in so I would recommend having cash available. 
+            There’s a Taxi rank just outside the entrance which is handy for you to head straight off to your next destination.
+        </p>
+        <p>
+            This place is a must if you’re a food lover! 
+            There’s so many different types of food for sale that I couldn’t even tell you what half of them were. 
+            Stalls line each side of the market for well over a kilometre, each one alive with chatter, cooking and singing. 
+            There’s some really great places to eat along the market, like Sushi Shin, which is definitely worth checking out. 
+            The marketing is pretty intense because it’s rammed with people so if it gets a bit too much for you at any point just slip off onto one of the many side 
+            streets which are full of even more restaurants and some really cool boutique shops as well.
+
+            Lastly, we didn’t get to visit here but Gion is Japan’s most well-known geisha district. It attracts many tourists with the hope of seeing a geisha, 
+            so be prepared for more crowded streets.
+        </p>
+        <p>
+            Firstly, pre-book this in advance! These buses book out extremely fast so reserve online a few days prior through https://highway-buses.jp/course/kawaguchiko.php
+
+           The bus is a much better option than the train for visiting Kawaguchiko. 
+           It leaves regularly and actually gets you there quicker (90 minutes) with no change overs, free Wi-Fi and is also significantly cheaper.
+
+           It’s a pretty long day trip just to see one spot, but for those of you who want to get that famous view of Fuji make sure you check the weather in 
+           advance and go on a clear day as often it can be hazy or overcast and Fuji is almost non-existent. Don’t forget to pre book you return bus home too!
+        </p>
+        <p>
+            For the best photo opp get the bus to a place called Chureito Pagoda. It’s approximately a 25 minute’s walk up hill to the viewing point but it’s the best way 
+            to see Fuji. On returning down the hill you can jump on the train to Lake Kawaguchiko (where your bus home will leave from). 
+            I wouldn’t allocate too much time in this area, 
+            it’s a great pit stop for an Udon bowl from Hote Udon and to see a beautiful lake view of Mount Fuji.
+        </p>
+        <nav class="blog-pagination" aria-label="Pagination">
+        <a class="btn btn-outline-primary rounded-pill" href="#">Older</a>
+        <a class="btn btn-outline-secondary rounded-pill disabled" aria-disabled="true">Newer</a>
+      </nav>
+
+    </div>
+
+    <div class="col-md-4">
+      <div class="position-sticky" style="top: 2rem;">
+        <div class="p-4 mb-3 bg-body-tertiary rounded fade-in-right-3">
+          <h4 class="fst-italic">About </h4>
+          <p class="mb-0"> The writer preferred to remain anonymous, and shared this article on another website naturalbornfeeder.com
+          </p>
+        </div>
+
+        <div>
+          <h4 class="fst-italic">Recent posts</h4>
+          <ul class="list-unstyled">
+            <li>
+              <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+                <div class="col-lg-8">
+                  <h6 class="mb-0">Example blog post title</h6>
+                  <small class="text-body-secondary">January 15, 2024</small>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+                <div class="col-lg-8">
+                  <h6 class="mb-0">This is another blog post title</h6>
+                  <small class="text-body-secondary">January 14, 2024</small>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+                <div class="col-lg-8">
+                  <h6 class="mb-0">Longer blog post title: This one has multiple lines!</h6>
+                  <small class="text-body-secondary">January 13, 2024</small>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="p-4">
+          <h4 class="fst-italic">Archives</h4>
+          <ol class="list-unstyled mb-0">
+            <li><a href="#">March 2021</a></li>
+            <li><a href="#">February 2021</a></li>
+            <li><a href="#">January 2021</a></li>
+            <li><a href="#">December 2020</a></li>
+            <li><a href="#">November 2020</a></li>
+            <li><a href="#">October 2020</a></li>
+            <li><a href="#">September 2020</a></li>
+            <li><a href="#">August 2020</a></li>
+            <li><a href="#">July 2020</a></li>
+            <li><a href="#">June 2020</a></li>
+            <li><a href="#">May 2020</a></li>
+            <li><a href="#">April 2020</a></li>
+          </ol>
+        </div>
+
+        <div class="p-4">
+          <h4 class="fst-italic">Elsewhere</h4>
+          <ol class="list-unstyled">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Facebook</a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+  crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Components</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+<style>
+  .articleimage{
+    margin-bottom: 75px !important;
+    padding-left: 15px !important;
+
+  }
+  p{
+    padding-left: 15px !important;
+    padding-right: 0px !important;
+    margin-right: 0px !important;
+  }
+
+ BODY{
+  background-color: rgb(186, 210, 234);
+ }
+ .navbar {
+      background-color: transparent !important;
+      z-index: 1000;
+      position: relative;
+    }
+
+    .navbar-nav .nav-link,
+    .navbar-brand {
+      color: black !important;
+    }
+
+    /* BUTTON STYLES */
+    .btn {
+      background-color: #d3d6db;
+      color: black;
+    }
+
+    .btn:hover {
+      background-color: #a7bcb9;
+    }
+
+    .dropdown-item {
+      background-color: #dfcdc3;
+    }
+
+    .dropdown-divider {
+      background-color: #975a5e;
+    }
+    .heading{
+      padding-left: 30px !important;
+    }
+    @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(100px); /* Start 100px to the right */
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0); /* End at the original position */
+    }
+  }
+
+  .fade-in-right {
+    animation: fadeInRight 2s ease-out; /* Animation duration is 2 seconds */
+  }
+  .fade-in-right-3 {
+    animation: fadeInRight 3s ease-out; /* Animation duration is 2 seconds */
+  }
+  .fade-in-right-4 {
+    animation: fadeInRight 4s ease-out; /* Animation duration is 2 seconds */
+  }
+
+  @keyframes fadeInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-100px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* Class to apply the animation */
+    .fade-in-left {
+      animation: fadeInLeft 2s ease-out;
+   
+    }
+
+    .fade-in-left-3 {
+      animation: fadeInLeft 3s ease-out;
+    }
+    .fade-in-left-4 {
+      animation: fadeInLeft 4s ease-out;
+    
+    }
+    @keyframes fadeInDown {
+  from {
+    opacity: 0;                 /* Start invisible */
+    transform: translateY(-100px); /* Start 100px above its original position */
+  }
+  to {
+    opacity: 1;                 /* Fully visible */
+    transform: translateY(0);   /* End at its original position */
+  }
+}
+
+.fade-in-down {
+  animation: fadeInDown 1s ease-out; /* Animation duration is 2 seconds */
+}
+</style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg fade-in-down">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="./Homepage.ejs"> <img src="./images/airplane.svg" height="30">Voyageons Ensemble</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="./Homepage.ejs">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./Aboutus.html">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contactus.html">Contact us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./publish.html">Publish</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Destinations
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item active" href="./Africa.html"><img src="./images/airplane-fill.svg">Africa</a></li>
+              <li><a class="dropdown-item" href="./America.html"> <img src="./images/airplane-fill.svg">America</a></li>
+              <li><a class="dropdown-item" href="./Asia.html"> <img src="./images/airplane-fill.svg">Asia</a></li>
+              <li><a class="dropdown-item" href="./Europe.html"> <img src="./images/airplane-fill.svg">Europe</a></li>
+              <li><a class="dropdown-item" href="./Oceania.html"> <img src="./images/airplane-fill.svg">Oceania</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+<div class="row g-5">
+    <div class="col-md-8">
+
+      <h3 class="heading pb-4 mb-4 fst-italic border-bottom fade-in-right-3">
+        Community publications
+      </h3>
+
+      <article class="blog-post">
+        <h2 class="heading display-5 link-body-emphasis mb-1 fade-in-right-3">My First Time In New York City - Blog of the Things</h2>
+        
+        <p class="blog-post-meta fade-in-left-3"> 26/08/2024 by <a href="#">Kritika Goel</a></p>
+        
+        <p>A city of endless possibilities, high energy, and great diversity, New York City had always been on the top of my bucket list and I knew I would love NYC before I even visited it (thanks to all the TV shows set in NYC).
+        </p>
+        <img src="./images/newyork01.jpg" class="articleimage col-lg-10 col-md-9 col-sm-12 col-11 fade-in-left-3">
+        <p>
+            People from all walks of life call the 5 boroughs that make up New York City their home. One borough in particular, Manhattan, served as the location for our trip to the Big Apple.
+
+        Whether you're a foodie, an art enthusiast, a theatre lover or just someone who loves a fast-paced life, New York City is the place for you.
+        </p>
+       
+        <p>
+            Day 01: 
+            Our trip to New York City started in Queens as we landed on a nice and sunny afternoon at LaGuardia Airport. We hopped into the iconic yellow cab that took us to our hotel - The Hampton Inn. The drive from the airport to our hotel gave us a good feel of the city and it was exactly how we'd imagined it to be.
+        </p>
+       <p>
+        The Hampton Inn is conveniently located in the heart of Midtown Manhattan and is just a two-minute walk from Times Square. After checking in to our hotel, we had the entire evening to start experiencing all the great things NYC has to offer. We walked around Times Square, which is the most touristy and frenetic part of the city. Even after dark, the lights from all the billboards trick you into believing it is still daytime.
+       </p>
+       <p>
+        On our first night in New York, we decided to watch The Lion King on Broadway, at the lovely Minskoff Theater, and boy, it was everything we'd imagined and more. Right from the music to the costumes and set design, everything was just spectacular, making The Lion King a must-see show on Broadway.
+       </p>
+       <p>
+        We decided to get some pizza for dinner (because duh, we were in New York), and after a lot of walking around, we stopped at this small pizzeria and enjoyed some delicious NY style pizza.
+
+       We also ran into the actor who plays George Washington in Hamilton (yay!).
+       </p>
+       <p>
+        Day 02:
+        Our second day started with an exciting three hour walking tour of NYC along with a private photographer. New York City is best explored on foot and this tour, conducted by PhotoTrek Tours, is a great way to do that. This tour also helped us figure out the grid system of Manhattan and how to use the subway, which really came in handy during the rest of our stay in NYC.
+
+        In just three hours, we managed to see Times Square, Central Park, Grand Central Station, the Upper East Side, Brooklyn Bridge, and Downtown Manhattan. What's more, we got some incredible photos out of this and Marc, the tour guide, did a good job of making it look like we were the only tourists in all the pictures he took.
+       </p>
+       <p>
+        Because we wanted to have all the pizza we could while we were in NYC, at the end of the tour, Marc dropped us off at one of the best pizzerias in town - Bleecker Street Pizza in Greenwich Village. Voted 'Best Pizza in NY' by the Food Network several times, this place is small, casual and has a wall lined with photos of celebrities who've visited the place (this includes Steven Tyler, Mike Tyson and the Kardashians among many others). After eating a large pizza pie and having a nice conversation with the man behind the counter, we decided to continue exploring the city on our own.
+       </p>
+       <img src="./images/newyork.jpg" class="articleimage col-lg-10 col-md-9 col-sm-12 col-11 fade-in-left-3">
+       <p>
+        We took the subway to Brooklyn and spent some time walking around the area, checking out the brownstone buildings. The view of the New York City skyline from Brooklyn is definitely worth checking out.
+       </p>
+       <p>
+        Continuing our touristy escapades, we went to the Top of the Rock at the Rockefeller Center to check out the stunning view of New York City that is truly one of a kind. We chose the Rockefeller Center over the Empire State Building because the NYC skyline somehow looks incomplete without the Empire State Building in it. Also, they have a shorter wait time, which really appealed to us.
+       </p>
+       <p>
+        After a long day of sightseeing, I met my friend from high school, Anjana, who took me to the Upper West Side for dinner at Café Lalo, which is the adorable café where Meg Ryan and Tom Hanks meet in the movie You've Got Mail.
+       </p>
+       <p>
+        Post dinner, we just walked around a lot and took the Subway back to Anjana's place in Queens. You'd think two really good friends who were meeting up after ages would do something more exciting but we just sat and binge watched episodes of The Mindy Project till we couldn't keep our eyes open anymore. Fun times.
+       </p>
+       <p>
+        Day 03 : 
+        Our third day started with an early morning train ride from Queens to Times Square. A trip to New York would be incomplete without visiting the Metropolitan Museum of Art so that's where we first headed. A pro tip for anyone visiting the Met - their $25 entry fee is only 'recommended' and not mandatory, so if you can't afford that but would still like to visit the Met, by all means pay what you can to get in.
+       </p>
+       <p>
+        The Met houses one of the largest art collections in the world and I could have easily spent the entire day there, but we only had about 3 hours. A few of my favorite things to see there were the Egyptian Temple of Dendur, the façade of the branch bank (part of the American wing), the marble patio from a Spanish Renaissance Castle, and the Chinese Garden Court.
+       </p>
+       <p>
+        We then decided to revisit Central Park. Although we did see a bit of it during our walking tour, we wanted more. Central Park is one of New York City's most breathtaking attractions and a must-see for anyone visiting. This 843-acre green space includes meadows, lakes, forests, monuments and good architecture! It's hard to see all the park's attractions in a day, let alone a couple of hours, but our stroll down Central Park was delightful.
+
+       </p>
+       
+       <p>
+        After that, we went on a spectacular sunset sail to experience NYC's beautiful skyline from the water, and also to see the Statue of Liberty. We set aboard a stunning yacht, where we were served some champagne, and given blankets because it was an unusually cold day. Despite it being grey and foggy, we completely enjoyed our sailing experience.
+       </p>
+       <p>
+        Even though we had a long and tiring day, we decided to hang around Times Square post dinner. We had some delectable cheesecake from Junior's, and shopped at Forever 21 past midnight before calling it a day (it was my first time shopping at a store past midnight so that was exciting).
+       </p>
+       <p>
+        Day 04 :
+        With just half a day left, we decided to devote our last few moments in NYC to some good old shopping. We visited the iconic Apple Store on Fifth Avenue and did the rest of our shopping in Times Square. We ended up shopping for longer than we had planned to so we had to get our lunch packed (pizza and cheesecake, of course) before we headed to Penn station to catch our train to Philadelphia.
+       </p>
+       <p>
+        New York City totally lived up to our expectations and we left with a heavy heart and lots of good memories. Honestly, there's A LOT to do in New York and no amount of time is enough to fully experience the city. NYC stole my heart and I can't wait to go back.
+       </p>
+        <nav class="blog-pagination" aria-label="Pagination">
+        <a class="btn btn-outline-primary rounded-pill" href="#">Older</a>
+        <a class="btn btn-outline-secondary rounded-pill disabled" aria-disabled="true">Newer</a>
+      </nav>
+
+    </div>
+
+    <div class="col-md-4">
+      <div class="position-sticky" style="top: 2rem;">
+        <div class="p-4 mb-3 bg-body-tertiary rounded fade-in-right-3">
+          <h4 class="fst-italic">About the writer</h4>
+          <p class="mb-0">Kritika Goel is a young indian lady, who has already been to different countries including Hong Kong, Singapore 
+            and Bali
+          </p>
+        </div>
+
+        <div>
+          <h4 class="fst-italic">Recent posts</h4>
+          <ul class="list-unstyled">
+            <li>
+              <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+                <div class="col-lg-8">
+                  <h6 class="mb-0">Example blog post title</h6>
+                  <small class="text-body-secondary">January 15, 2024</small>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+                <div class="col-lg-8">
+                  <h6 class="mb-0">This is another blog post title</h6>
+                  <small class="text-body-secondary">January 14, 2024</small>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+                <div class="col-lg-8">
+                  <h6 class="mb-0">Longer blog post title: This one has multiple lines!</h6>
+                  <small class="text-body-secondary">January 13, 2024</small>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="p-4">
+          <h4 class="fst-italic">Archives</h4>
+          <ol class="list-unstyled mb-0">
+            <li><a href="#">March 2021</a></li>
+            <li><a href="#">February 2021</a></li>
+            <li><a href="#">January 2021</a></li>
+            <li><a href="#">December 2020</a></li>
+            <li><a href="#">November 2020</a></li>
+            <li><a href="#">October 2020</a></li>
+            <li><a href="#">September 2020</a></li>
+            <li><a href="#">August 2020</a></li>
+            <li><a href="#">July 2020</a></li>
+            <li><a href="#">June 2020</a></li>
+            <li><a href="#">May 2020</a></li>
+            <li><a href="#">April 2020</a></li>
+          </ol>
+        </div>
+
+        <div class="p-4">
+          <h4 class="fst-italic">Elsewhere</h4>
+          <ol class="list-unstyled">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Facebook</a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+  crossorigin="anonymous"></script>
+
+</body>
+</html>

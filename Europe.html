@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Components</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <style>
+   .navbar {
+      background-color: transparent !important;
+      z-index: 1000;
+      position: relative;
+    }
+
+    .navbar-nav .nav-link,
+    .navbar-brand {
+      color: black !important;
+    }
+
+    /* BUTTON STYLES */
+    .btn {
+      background-color: #d3d6db;
+      color: black;
+    }
+
+    .btn:hover {
+      background-color: #a7bcb9;
+    }
+
+    .dropdown-item {
+      background-color: #dfcdc3;
+    }
+
+    .dropdown-divider {
+      background-color: #975a5e;
+    }
+
+    /* BACKGROUND STYLES */
+    body  { background-image: url('./images/europe\ background.avif');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 100vh; 
+    margin: 0;
+    background-attachment: fixed !important;
+    }
+
+    /* SAFARI ARTICLE */
+    #parisarticle {
+      background-color: rgb(221, 238, 238)!important;
+      margin: 50px;
+      padding: 30px;
+      margin-top: 300px !important;
+    }
+
+    #parisimage {
+      width: 300px;
+      height: 250px;
+      float: right;
+      padding-top: 15px !important;
+      padding-bottom: 15px !important;
+      padding-left: 20px !important;
+      padding-right: 15px !important;
+    }
+
+    #paristitle {
+      font-size: 45px !important;
+    }
+
+    #parisdescription {
+      font-size: 20px !important;
+    }
+
+    /* CARD STYLES */
+    .card-img-top {
+      height: 200px !important;
+      width: 100% !important; /* **Made image width 100% for responsiveness** */
+      object-fit: cover; /* **Ensure the image fits within the card** */
+    }
+
+    .card {
+      margin-top: 30px !important;
+    }
+
+    .lobster-regular {
+      font-family: "Lobster", sans-serif;
+      font-size: 90px;
+      text-align: center;
+    
+      color: azure;
+    }
+
+    /* BUTTON STYLES */
+    #cardbtn {
+      background-color: #925d60;
+    }
+
+    /* **Responsive background size for smaller screens** */
+    @media only screen and (max-width: 768px) {
+      body {
+        background-attachment: scroll;
+      }
+
+      .lobster-regular {
+        font-size: 50px; /* Smaller heading on mobile */
+      }
+    }
+    .active{
+      background-color: #532d2f !important;
+    }
+
+    
+    @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(100px); /* Start 100px to the right */
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0); /* End at the original position */
+    }
+  }
+
+  .fade-in-right {
+    animation: fadeInRight 2s ease-out; /* Animation duration is 2 seconds */
+    padding-bottom: 300px !important;
+  }
+
+  .fade-in-right-4 {
+    animation: fadeInRight 4s ease-out; /* Animation duration is 2 seconds */
+  }
+
+  @keyframes fadeInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-100px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* Class to apply the animation */
+    .fade-in-left {
+      animation: fadeInLeft 2s ease-out;
+      padding-top: 300px !important;
+    }
+
+    
+    .fade-in-left-4 {
+      animation: fadeInLeft 4s ease-out;
+    
+    }
+    @keyframes fadeInDown {
+  from {
+    opacity: 0;                 /* Start invisible */
+    transform: translateY(-100px); /* Start 100px above its original position */
+  }
+  to {
+    opacity: 1;                 /* Fully visible */
+    transform: translateY(0);   /* End at its original position */
+  }
+}
+
+.fade-in-down {
+  animation: fadeInDown 1s ease-out; /* Animation duration is 2 seconds */
+}
+
+  </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg fade-in-down">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./Homepage.ejs"> <img src="./images/airplane.svg" height="30">Voyageons Ensemble</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="./Homepage.ejs">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./Aboutus.html">About</a>
+              </li>
+              <li class="nav-item"></li>
+                <a class="nav-link" href="./contactus.html">Contact</a>
+              </li>
+              <li class="nav-item"></li>
+                <a class="nav-link " href="./publish.html">Publish</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Destinations
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="./Africa.html"><img src="./images/airplane-fill.svg">Africa</a></li>
+                  <li><a class="dropdown-item" href="./America.html"> <img src="./images/airplane-fill.svg">America</a></li>
+                  <li><a class="dropdown-item" href="./Asia.html"> <img src="./images/airplane-fill.svg">Asia</a></li>
+                  <li><a class="dropdown-item active" href="./Europe.html"> <img src="./images/airplane-fill.svg">Europe</a></li>
+                  <li><a class="dropdown-item" href="./Oceania.html"> <img src="./images/airplane-fill.svg">Oceania</a></li>
+                 
+                </ul>
+              </li>
+              
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>  
+      <div>
+      <h1 class="lobster-regular fade-in-left">Continent: </h1>
+      <h1 class="lobster-regular fade-in-right"> Europe</h1>
+    </div>
+  
+    <div class="container">
+      <div id="parisarticle">
+        <img id="parisimage" class="fade-in-right-4" src="./images/paris.jpg">
+        <h1 id="paristitle" class="fade-in-left-4">Visiting Paris: the essentials</h1>
+        <p id="parisdescription" class="fade-in-left-4">
+          Welcome to Paris ! This city where I loved living for almost 10 years, exciting, and so culturally rich! 
+          <br/>
+          In this blog article, I give you a little overview of the must-see places to visit. To visit Paris, you have to walk around, get lost in the streets and look up. 
+          I give you my top 10 to visit Paris! </p>
+        <p class="lead mb-0"><a href="./Parisarticle.html" class="text-body-emphasis fw-bold">Continue reading...</a></p>
+      </div>
+    </div>
+  
+    <div class="container">
+      <div class="row">
+        
+        
+         <!-- Second Card -->
+      <div class="col-lg-4 col-md-6 col-12 mb-4">
+        <div class="card">
+          <a href="#">
+            <img src="./images/milano.webp" class="card-img-top fade-in-right-4" alt="An image of Milano">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title fade-in-left-4">What to do in Milano in 3 days </h5>
+            <p class="card-text fade-in-left-4"> Located in the Lombardy region, Milan is the world capital of design and fashion. Italy’s financial center and dynamic metropolis, it is also an important cultural city. 
+              How can I visit Milan in 3 days? We’ve put together a detailed itinerary to help you discover what to do in Milan!</p>
+            <a id="cardbtn" href="./Milanoarticle.html" class="btn btn-primary">Read Me</a>
+          </div>
+        </div>
+      </div>
+  
+      
+      <!-- Second Card -->
+      <div class="col-lg-4 col-md-6 col-12 mb-4">
+        <div class="card">
+          <a href="#">
+            <img src="./images/switzerland.jpg" class="card-img-top fade-in-right-4" alt="An image of mountains in switzerland">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title fade-in-left-4">Likeside Bliss Hiking Zermatt's Scenic 5 lake trail</h5>
+            <p class="card-text fade-in-left-4">The 5-Lake Trail in Zermatt is one of the region’s most picturesque hikes, offering breathtaking views of the Matterhorn mirrored in crystal-clear alpine lakes. 
+              Winding through meadows, forests, and mountain landscapes, the 9.8 km trail takes you past ...
+            </p>
+            <a id="cardbtn" href="./Switzerlandarticle.html" class="btn btn-primary">Read Me</a>
+          </div>
+        </div>
+      </div>
+  
+    
+            </div>
+          </div>
+        </div> <!-- End of Row -->
+      </div> <!-- End of Container -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

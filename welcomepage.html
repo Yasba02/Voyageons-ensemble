@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Components</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap" rel="stylesheet"> 
+  <style>
+   
+.navbar {
+  background-color: transparent !important;
+  z-index: 1000;
+  position: relative;
+    }
+
+.navbar-nav .nav-link {
+  color: white !important; /* Ensure navbar links remain visible */
+}
+
+.navbar-brand {
+  color: white !important; /* Ensure brand name remains visible */
+}
+
+.btn {
+  background-color: #d3d6db;
+  border-color: #d3d6db;
+  color: black !important;
+}
+
+.btn:hover {
+  background-color: #e4f1fe !important;
+}
+
+.dropdown-item {
+  background-color: #dfcdc3;
+}
+
+.dropdown-divider {
+  background-color: #975a5e;
+}
+  
+.eagle-lake-regular-display-5 {
+  font-family: "Eagle Lake", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem !important;
+}
+
+
+.dancing-script-lead {
+  font-family: "Dancing Script", cursive;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 2.5rem !important;
+  color: black;
+  margin-top: 10px !important;
+  
+}
+
+
+body{
+  background-image: url('./images/maldives05.webp');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 100vh; 
+    margin: 0 !important;
+    padding: 0 !important;
+    background-attachment: fixed !important;
+}
+#home-page-website-title{
+  color:black !important;
+ 
+  font-size: 4rem !important;
+}
+nav{
+  margin-bottom: 0px !important;
+}
+.text-body-secondary{
+  color: whitesmoke !important;
+}
+#carouselpadding{
+  padding-top: 100px !important;
+}
+#WelcomingParagraph{
+  padding-top: 0px !important;
+  margin-top: 0px !important;
+  margin-bottom: 5px !important;
+}
+.connectbut{
+  background-color: rgba(201, 131, 131, 0.395);
+  color: white;
+  text-align: center !important;
+  margin-top: 0px !important;
+  padding-top: 0px !important;
+  margin-bottom: 0px !important;
+  padding-bottom: 0px !important;
+  height: 40px !important;
+  width: 100px !important;
+}
+.connectbut:hover{
+    background-color: rgb(46, 138, 181);
+    margin-top: 0px !important;
+  padding-top: 0px !important;
+  margin-bottom: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+@keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(100px); /* Start 100px to the right */
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0); /* End at the original position */
+    }
+  }
+
+  .fade-in-right {
+    animation: fadeInRight 2s ease-out; /* Animation duration is 2 seconds */
+   
+  }
+
+ 
+
+  @keyframes fadeInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-100px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* Class to apply the animation */
+    .fade-in-left {
+      animation: fadeInLeft 2s ease-out;
+     
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(100px); /* Start below the normal position */
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0); /* Move to the original position */
+      }
+    }
+
+    /* Class to apply the animation */
+    .fade-in-up {
+      animation: fadeInUp 2s ease-out;
+    }
+
+    @keyframes fadeInDown {
+  from {
+    opacity: 0;                 /* Start invisible */
+    transform: translateY(-100px); /* Start 100px above its original position */
+  }
+  to {
+    opacity: 1;                 /* Fully visible */
+    transform: translateY(0);   /* End at its original position */
+  }
+}
+
+.fade-in-down {
+  animation: fadeInDown 1s ease-out; /* Animation duration is 2 seconds */
+}
+.fade-in-down-2{
+  animation: fadeInDown 2s ease-out;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0); /* Start at 0% of its original size */
+    opacity: 0;          /* Start fully transparent */
+  }
+  to {
+    transform: scale(1); /* End at its original size */
+    opacity: 1;          /* Fully visible */
+  }
+}
+
+.zoom-in {
+  animation: zoomIn 2s ease-out; /* Animation duration of 1.5 seconds */
+}
+
+  </style>
+</head>
+
+<body>
+ 
+  <nav class="navbar navbar-expand-lg fade-in-down">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="./welcomepage.html"> <img src="./images/airplane.svg" height="30">Voyageons Ensemble</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="./Homepage.Signin.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./Aboutus.Signin.html">About</a>
+          </li>
+          <li class="nav-item"></li>
+            <a class="nav-link" href="./contactUs.Signin.html">Contact</a>
+          </li>
+          <li class="nav-item"></li>
+                <a class="nav-link " href="./Publish.Signin.html">Publish</a>
+              </li>
+
+          
+      </div>
+    </div>
+  </nav>
+
+  
+
+  <div class="px-4 py-5 my-5 text-center">
+    <img class="d-block mx-auto mb-4 fade-in-down-2" src="./images/luggage-fill.svg" height="150" width="150"> 
+    <h1 id="home-page-website-title" class="display-5 fw-bold text-body-emphasis eagle-lake-regular-display-5 fade-in-right">Voyageons Ensemble</h1>
+    <div class="d-flex gap-2 justify-content-center py-5">
+      <a href="./Login.html">
+        <button onclick="window.location.href='/login'" class="connectbut btn btn-primary d-inline-flex align-items-center zoom-in" type="button">
+            Log In 
+        
+          <svg class="bi ms-1" width=10px height="20"><use xlink:href="#arrow-right-short"></use></svg>
+        </button>
+        </a>
+       
+        <a href="./SignIn.html">
+        <button onclick="window.location.href='/register'" class="connectbut btn btn-outline-secondary d-inline-flex align-items-center zoom-in" type="button">
+          Register
+          
+          <svg class="bi ms-1" width=10px height="20"><use xlink:href="#arrow-right-short"></use></svg>
+        </button>
+       </a>
+      </div> 
+    
+    
+    <div class="col-lg-6 mx-auto">
+      <p id="WelcomingParagraph" class="dancing-script-lead mb-4 fade-in-left">Welcome to "Voyageons Ensemble" your best travel blog where you can dive into our planet's beauty from the comfort of your home </p>
+      
+    
+    </div>
+    
+
+<!-- Centering the carousel -->
+<div class="container">
+<div id="carouselpadding" class="d-flex justify-content-center">
+    <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" style="width: 80%; max-width: 800px;">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="5000">
+                <img src="./images/africa background.jpg" class="d-block w-100" alt="An image of two lions in Africa" height="350" width="400">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Aquila Safari Review – The Closest Safari to Cape Town!</h5>
+                  <p>You can read more about the safari experience and honnest review shared by a traveler just by subscribing, Sign in now to discover the beauty of Africa and many other places </p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+                <img src="./images/Australia 2.avif" class="d-block w-100" alt="An image of the night sky in Australia" height="350" width="400">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Is winter a good time to visit Australia ?</h5>
+                  <p> Winter in Australia’s East Coast unveils a captivating charm, offering travelers a distinct experience away from the bustling crowds and scorching heat of summer. This season presents a unique opportunity to explore the region’s beauty in a quieter, more temperate setting, allowing visitors to discover hidden gems and iconic landmarks with a sense of tranquility. 
+                    Let’s delve deeper into why winter is an ideal time to embark on a journey to The Land Down Under.</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="5000">
+                <img src="./images/paris.jpg" class="d-block w-100" alt="An image of Paris at night with the Eiffel tower" height="350" width="400">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Visiting Paris: the essentials</h5>
+                  <p>Finally in Paris, the city of love and lights. You can read the honest review of Aurelie about Paris just by subscribing, it won't take more than 5 minutes to discover more about this city!!</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+</div>
+<div class="container">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+      <span class="mb-3 mb-md-0 text-body-secondary">© 2024 Voyageons Ensemble</span>
+    </div>
+
+    
+  </footer>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

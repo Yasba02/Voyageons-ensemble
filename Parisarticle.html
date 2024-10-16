@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Components</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+<style>
+  .articleimage{
+    margin-bottom: 75px !important;
+    padding-left: 15px !important;
+  }
+  p{
+    padding-left: 15px !important;
+    padding-right: 0px !important;
+    margin-right: 0px !important;
+  }
+ 
+ BODY{
+  background-color: rgb(186, 210, 234);
+ }
+ .navbar {
+      background-color: transparent !important;
+      z-index: 1000;
+      position: relative;
+    }
+
+    .navbar-nav .nav-link,
+    .navbar-brand {
+      color: black !important;
+    }
+
+    /* BUTTON STYLES */
+    .btn {
+      background-color: #d3d6db;
+      color: black;
+    }
+
+    .btn:hover {
+      background-color: #a7bcb9;
+    }
+
+    .dropdown-item {
+      background-color: #dfcdc3;
+    }
+
+    .dropdown-divider {
+      background-color: #975a5e;
+    }
+    .heading{
+      padding-left: 30px !important;
+    }
+    @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(100px); /* Start 100px to the right */
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0); /* End at the original position */
+    }
+  }
+
+  .fade-in-right {
+    animation: fadeInRight 2s ease-out; /* Animation duration is 2 seconds */
+  }
+  .fade-in-right-3 {
+    animation: fadeInRight 3s ease-out; /* Animation duration is 2 seconds */
+  }
+  .fade-in-right-4 {
+    animation: fadeInRight 4s ease-out; /* Animation duration is 2 seconds */
+  }
+
+  @keyframes fadeInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-100px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* Class to apply the animation */
+    .fade-in-left {
+      animation: fadeInLeft 2s ease-out;
+   
+    }
+
+    .fade-in-left-3 {
+      animation: fadeInLeft 3s ease-out;
+    }
+    .fade-in-left-4 {
+      animation: fadeInLeft 4s ease-out;
+    
+    }
+    @keyframes fadeInDown {
+  from {
+    opacity: 0;                 /* Start invisible */
+    transform: translateY(-100px); /* Start 100px above its original position */
+  }
+  to {
+    opacity: 1;                 /* Fully visible */
+    transform: translateY(0);   /* End at its original position */
+  }
+}
+
+.fade-in-down {
+  animation: fadeInDown 1s ease-out; /* Animation duration is 2 seconds */
+}
+</style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg fade-in-down">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="./Homepage.ejs"> <img src="./images/airplane.svg" height="30">Voyageons Ensemble</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="./Homepage.ejs">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./Aboutus.html">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contactus.html">Contact us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./publish.html">Publish</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Destinations
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item active" href="./Africa.html"><img src="./images/airplane-fill.svg">Africa</a></li>
+              <li><a class="dropdown-item" href="./America.html"> <img src="./images/airplane-fill.svg">America</a></li>
+              <li><a class="dropdown-item" href="./Asia.html"> <img src="./images/airplane-fill.svg">Asia</a></li>
+              <li><a class="dropdown-item" href="./Europe.html"> <img src="./images/airplane-fill.svg">Europe</a></li>
+              <li><a class="dropdown-item" href="./Oceania.html"> <img src="./images/airplane-fill.svg">Oceania</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+<div class="row g-5">
+    <div class="col-md-8">
+
+      <h3 class="heading pb-4 mb-4 fst-italic border-bottom fade-in-right-3">
+        Community publications
+      </h3>
+
+      <article class="blog-post">
+        <h2 class="heading display-5 link-body-emphasis mb-1 fade-in-right-3">Visiting Paris: the essentials</h2>
+        
+        <p class="blog-post-meta fade-in-left-3"> by <a href="#">Aurelie</a></p>
+        
+        <p> 
+            Welcome to Paris! This city where I loved living for almost 10 years, exciting, and so culturally rich! 
+            In this blog article, I give you a little overview of the must-see places to visit. To visit Paris, you have to walk around, get lost in the streets and look up. 
+            I give you my top 10 to visit Paris!
+        </p>
+        <img src="./images/paris.jpg" class="articleimage col-lg-10 col-md-9 col-sm-12 col-11 fade-in-left-3">
+        <p>
+            The atmosphere of Paris is unique. In 10 years of living in the capital, I was always so happy to see certain places, museums, neighborhoods, and the Eiffel Tower again. And I always have so much pleasure in seeing Paris again. It is impossible to get tired of all this beauty! Paris will remain my favorite city ♥. You have to walk around and get lost.
+             You also have to be a little organized to get places in the best exhibition of the moment or in one of the trendy restaurants in the capital.
+        </p>
+        <p>
+            Visiting Tips: If you only have a few days to visit Paris, design your stay based on what you have already seen 
+            (or not) in the capital, and the people you are with. Treat yourself without overloading your 2 or 3 days in Paris. The city is huge and so pretty, it would be a shame to run around everywhere without enjoying it. Don't forget to bring your most comfortable shoes, and don't hesitate to take public transport (so essential for getting around). In Paris, it is very convenient to take the metro (almost one every 500 meters) or jump on a bus. Think about booking a play for an evening or a show, there are so many great things to see in Paris. 
+            Have a great visit to the capital!
+        </p>
+        <p>
+            Accommodation advice: it is difficult to find accommodation in Paris easily without planning in advance, 
+            and plan on spending €100-150 per night. Very central: Chouchou Hotel (a stone's throw from Galeries Lafayette, but for a not too tight budget), 
+            in other districts: Babel Belleville or Hôtel Jules&Jim or Pepper & Papier Apartments
+        </p>
+        <img src="./images/paris01.jpg" class="articleimage col-lg-10 col-md-9 col-sm-12 col-11 fade-in-left-3">
+        <p>
+            Built in just two years to celebrate the 1889 Universal Exhibition and designed by Gustave Eiffel. Every year, the Eiffel Tower is visited by more than 7 million people! This technical feat is worth the detour, climbing the first two floors on foot to have a view of the entire city.
+             However, you have to be patient to have the chance to get your entry ticket at one of the ticket offices located at the foot of the Tower (or manage to get it online).
+        </p>
+        <p>
+            Starting from the esplanade of the Louvre Museum, you will cross the oldest garden in Paris: 
+            the Tuileries with its Carrousel garden, the large round pond and the large octagonal pond. Then, coming out of the Tuileries Garden, you will come across the Place de la Concord, its obelisk, and the Ferris wheel. The obelisk comes from Egypt, from the Luxor Temple, and was offered as a gift to France. Now you will go up the famous Champs-Elysées, on your left the Petit Palais, on your right the Jardin des Champs-Elysées, then all the shops on the avenue. Last highlight: the Arc de Triomphe! If you haven't done so, I strongly recommend you to go up to its roof, 
+            the view is magnificent (it's free for 18-25 year olds from the EU on presentation of proof!). 
+
+        </p>
+        <p>
+            Nestled on the Seine, two small islands that are not to be missed are to be added to your itinerary: the Île Saint Louis and the Île de la Cité where the Notre-Dame Basilica is located (currently under construction as you know). The views of the water and the atmosphere here are very pleasant. Take a stroll, take a look at the old books on offer in the second-hand bookshops, eat an ice cream at Bertillon. Then head to the Latin Quarter, near the Fontaine Saint Michel. Here are lots of restaurants and bars, very touristy, but for all tastes. 
+            Afterwards, you can continue to the Saint Germain-des-Prés district or the superb Jardin du Luxembourg.
+        </p>
+        <p>
+            The charm of Montmartre still works with its stairs, its restaurants, its bars, its Place du Tertre and its painters, its alleys. Here, we return to another time, that of old Paris, where music resounds and life bustles. The view of Paris from the Basilica of the Sacré Coeur is great. In Montmartre, there is plenty of street art to observe. On the way back down, you can go through Pigalle, to see the Moulin Rouge. Despite the sulphurous side of the district, 
+            there are plenty of very nice restaurants and bars in "SoPi" (South Pigalle) like the Hôtel Amour .
+        </p>
+        <p>
+            I'm talking to you here about a place that I really like and that I enjoyed during my 10 years of Parisian life. 
+            I also lived for many years in the immediate vicinity of the Canal-Saint-Martin district and I absolutely loved it! Festive atmosphere in the summer, a mecca for impromptu aperitifs on the banks of the Canal. Going up a little, you will come across the Canal de l'Ourcq, just as nice, ideal for playing pétanque or mölkky. From there, continue to the Quartier de Belleville, popular, with lots of street art, and a great atmosphere!
+
+        </p>
+        <p>
+            Between the Porte de la Villette and the Porte de Pantin, there are hectares of greenery and plenty of cultural venues: the Grande Halle, the Cité des Sciences et de l'Industrie, the Géode, the Cité de la Musique. As soon as the weather is nice, various festivals and activities are organized, such as the Open-Air Cinema, Villette Sonique and many others around sports and culture. 
+            For children, the Cité de la Science always offers great exhibitions. More information here on La Villette.
+        </p>
+        <p>
+            I lived in the 2nd arrondissement of Paris for a long time, and the area has been well renovated, it is lively and vibrant. The Halles shopping center has been completely remodeled, and the park behind it too with the new Bourse museum. And then there is also the Rue de Rivoli with all its shops and the Samaritaine which has now reopened (finally!).
+            Let's also add that you shouldn't miss the rue Montorgueil that I love so much.
+        </p>
+        <img src="./images/parisLouvre.jpeg" class="articleimage col-lg-10 col-md-9 col-sm-12 col-11 fade-in-left-3">
+        <p>
+            Also known as the green corridor, this walk starts from Avenue Daumesnil (below Bastille) to the Jardin de Reuilly. For me, this is the coolest part of this planted promenade that looks like the HighLine in New York for those who know it. A green and relaxing walk in Paris! It then continues to the Porte Dorée and then the Porte de Vincennes.
+             More information here to access the green corridor in Paris.
+        </p>
+        <p>
+            Another very nice neighborhood: the Marais! You can leave from the Hôtel de Ville and go to the unmissable rue des Rosiers and its falafels, but also the shops open even on Sundays. Don't forget the Place des Vosges with the house of Victor Hugo and the rue des francs-bourgeois. In the Marais there is the Picasso museum but also the National Archives, and a stone's throw away the Pompidou Center and the Arts et Métiers Center. 
+            You can even go to the Marché des Enfants Rouges, a unique place to eat.
+        </p>
+        <p>
+            A stay in Paris necessarily includes a visit to at least one museum. Here in Paris, the museums are magnificent. Let us of course mention the Louvre, the Musée d'Orsay, the Centre Pompidou which I particularly like, but I have visited all the museums below one or more times, and they are all incredible. To take advantage of them, those under 26 have free entry upon presentation of an ID and on the first Sunday of each month, 
+            a large number of museums are free (a fairly busy day, find out well in advance). <br/>
+            During this Covid period, many museums have been closed... you have to take advantage of them when they are open, don't hesitate. Here is a list of the museums that I have had the chance to visit one or more times:
+        </p>
+        <p>
+            The Louvre Museum: one of the most beautiful museums in the world ❤ in the heart of Paris
+            <br/>
+            The Musée d'Orsay: a large national museum located in the 7th arrondissement, it's my favorite!
+            <br/>
+            The Picasso Museum: In the central Marais district. I really liked this museum.
+            <br/>
+            The Quai Branly Museum: A museum dedicated to the Arts and Civilizations of Africa, Asia, Oceania and the Americas, it is a very beautiful museum and the atmosphere is unique.
+            <br/>
+            The Louis Vuitton Foundation: A little less central because it is located in the Jardin d'Acclimatation, its architecture by Frank Gehry is worth the detour.
+            <br/>
+            The Centre Pompidou: unmissable for its architecture and its modern art collections.
+            <br/>
+            The National Museum of Natural History : I admit to being surprised by the size of these galleries, and I loved the staging. There are often exhibitions for children. Don't miss this stroll in the Jardin des Plantes.
+            <br/>
+            Bourse du Commerce of the Pinault Foundation: the latest one that opened in May 2021 in the restored Les Halles district. The renovation of the place and its central space are amazing. For me, it's more of a museum for adults in terms of exhibitions (but the hall is superb!)
+            <br/>
+            City of Science and Industry: another place that can please children and adults with always fun and well thought-out exhibitions.
+            <br/>
+            And also: the Museum of Arts and Crafts , the Carnavalet Museum , the European House of Photography …
+        </p>
+        <p>
+            And there are so many things missing from my article. A single visit to Paris is not enough, it is essential to come back in different seasons, and enjoy it. 
+            And couple your visit with the surroundings of Paris: Disney, Versailles, Chantilly, and so many others. <br/>
+            Enjoy your visit to Paris !
+        </p>
+        <nav class="blog-pagination" aria-label="Pagination">
+        <a class="btn btn-outline-primary rounded-pill" href="#">Older</a>
+        <a class="btn btn-outline-secondary rounded-pill disabled" aria-disabled="true">Newer</a>
+      </nav>
+
+    </div>
+
+    <div class="col-md-4">
+      <div class="position-sticky" style="top: 2rem;">
+        <div class="p-4 mb-3 bg-body-tertiary rounded fade-in-right-3">
+          <h4 class="fst-italic">About the writer</h4>
+          <p class="mb-0"> Aurelie is a young lady traveler who lived for 10 years in Pais before she started to visit the world.
+            In her blog named : lespetitsvoyagesdelilly.com, she shares her travel tips and experiences.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="fst-italic">Recent posts</h4>
+          <ul class="list-unstyled">
+            <li>
+              <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+                <div class="col-lg-8">
+                  <h6 class="mb-0">Example blog post title</h6>
+                  <small class="text-body-secondary">January 15, 2024</small>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+                <div class="col-lg-8">
+                  <h6 class="mb-0">This is another blog post title</h6>
+                  <small class="text-body-secondary">January 14, 2024</small>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+                <div class="col-lg-8">
+                  <h6 class="mb-0">Longer blog post title: This one has multiple lines!</h6>
+                  <small class="text-body-secondary">January 13, 2024</small>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="p-4">
+          <h4 class="fst-italic">Archives</h4>
+          <ol class="list-unstyled mb-0">
+            <li><a href="#">March 2021</a></li>
+            <li><a href="#">February 2021</a></li>
+            <li><a href="#">January 2021</a></li>
+            <li><a href="#">December 2020</a></li>
+            <li><a href="#">November 2020</a></li>
+            <li><a href="#">October 2020</a></li>
+            <li><a href="#">September 2020</a></li>
+            <li><a href="#">August 2020</a></li>
+            <li><a href="#">July 2020</a></li>
+            <li><a href="#">June 2020</a></li>
+            <li><a href="#">May 2020</a></li>
+            <li><a href="#">April 2020</a></li>
+          </ol>
+        </div>
+
+        <div class="p-4">
+          <h4 class="fst-italic">Elsewhere</h4>
+          <ol class="list-unstyled">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Facebook</a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+  crossorigin="anonymous"></script>
+
+</body>
+</html>

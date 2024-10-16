@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Components</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+<style>
+  .articleimage{
+    margin-bottom: 75px !important;
+    padding-left: 30px !important;
+  }
+  p{
+    padding-left: 30px !important;
+  }
+
+ BODY{
+  background-color: beige;
+ }
+ .navbar {
+      background-color: transparent !important;
+      z-index: 1000;
+      position: relative;
+    }
+
+    .navbar-nav .nav-link,
+    .navbar-brand {
+      color: black !important;
+    }
+
+    /* BUTTON STYLES */
+    .btn {
+      background-color: #d3d6db;
+      color: black;
+    }
+
+    .btn:hover {
+      background-color: #a7bcb9;
+    }
+
+    .dropdown-item {
+      background-color: #dfcdc3;
+    }
+
+    .dropdown-divider {
+      background-color: #975a5e;
+    }
+    .heading{
+      padding-left: 30px !important;
+    }
+    @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(100px); /* Start 100px to the right */
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0); /* End at the original position */
+    }
+  }
+
+  .fade-in-right {
+    animation: fadeInRight 2s ease-out; /* Animation duration is 2 seconds */
+  }
+  .fade-in-right-3 {
+    animation: fadeInRight 3s ease-out; /* Animation duration is 2 seconds */
+  }
+  .fade-in-right-4 {
+    animation: fadeInRight 4s ease-out; /* Animation duration is 2 seconds */
+  }
+
+  @keyframes fadeInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-100px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* Class to apply the animation */
+    .fade-in-left {
+      animation: fadeInLeft 2s ease-out;
+   
+    }
+
+    .fade-in-left-3 {
+      animation: fadeInLeft 3s ease-out;
+    }
+    .fade-in-left-4 {
+      animation: fadeInLeft 4s ease-out;
+    
+    }
+    @keyframes fadeInDown {
+  from {
+    opacity: 0;                 /* Start invisible */
+    transform: translateY(-100px); /* Start 100px above its original position */
+  }
+  to {
+    opacity: 1;                 /* Fully visible */
+    transform: translateY(0);   /* End at its original position */
+  }
+}
+
+ .fade-in-down {
+  animation: fadeInDown 1s ease-out; /* Animation duration is 2 seconds */
+}
+</style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg fade-in-down">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="./Homepage.ejs"> <img src="./images/airplane.svg" height="30">Voyageons Ensemble</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="./Homepage.ejs">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./Aboutus.html">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contactus.html">Contact us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./publish.html">Publish</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Destinations
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item active" href="./Africa.html"><img src="./images/airplane-fill.svg">Africa</a></li>
+              <li><a class="dropdown-item" href="./America.html"> <img src="./images/airplane-fill.svg">America</a></li>
+              <li><a class="dropdown-item" href="./Asia.html"> <img src="./images/airplane-fill.svg">Asia</a></li>
+              <li><a class="dropdown-item" href="./Europe.html"> <img src="./images/airplane-fill.svg">Europe</a></li>
+              <li><a class="dropdown-item" href="./Oceania.html"> <img src="./images/airplane-fill.svg">Oceania</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+<div class="row g-5">
+    <div class="col-md-8">
+      <h3 class="heading pb-4 mb-4 fst-italic border-bottom fade-in-right-3">
+        Community publications
+      </h3>
+
+      <article class="blog-post">
+        <h2 class="heading display-5 link-body-emphasis mb-1 fade-in-right-3">Aquila Safari Review – The Closest Safari to Cape Town!</h2>
+        
+        <p class="blog-post-meta fade-in-left-3"> 19/08/2024 by <a href="#">Hannah Stephenson</a></p>
+        <img class="articleimage col-lg-10 col-md-9 col-sm-12 col-12 fade-in-left-3" src="./images/africa background.jpg" >
+        <p>If you’re keen to do a safari in South Africa, but are only visiting Cape Town, then I highly recommend the Aquila Safari.
+          It may not be the Kruger National Park, but the Aquila Private Game Reserve is home to tons of amazing African animals.      
+          You can take a day tour here and enjoy a fun and informative game drive,
+         while glimpsing some of the most majestic creatures that call South Africa home.           
+          I’ve done the Aquila safari twice now with friends who came to visit – once in the summer, and once in the winter. 
+          Keep on reading to discover everything you need to know about the Aquila safari and decide whether or not it’s the right tour for you.
+       </p>
+      
+        <p>The Aquila safari is a tour that takes you to a private game reserve, where you’ll take a drive to see the animals.
+          Both times, I’ve seen four out of the Big Five. I saw elephants, lions, rhino, 
+          and buffalo, in case you were wondering – no leopards!  </p>
+          <p>       
+          As well as animals, you’ll also find a restaurant, bar, spa, and lounge at the Aquila Reserve. In fact, it’s basically a resort. 
+          During the summer, you can use the pool, so bring your swimmers!    
+          Visiting Aquila is a really popular thing to do in Cape Town, and the Real Housewives even visited! 
+          I’m no housewife (although I’m waiting for Bravo to call at any moment), so my two visits were drama free. 
+          The Aquila safari tour includes transport from Cape Town. Then, on arrival, we got a complimentary welcome drink, although I found this way too sweet for my liking.
+        </p> 
+        <p>
+          When I did this tour during the winter, we got breakfast and lunch, but during summer, we got lunch only. 
+          I think the extra meal during winter was to make up for the fact we couldn’t use the pool! 
+          The food was okay, but not exceptional. There was certainly plenty of it, though!
+          I liked the cheese selection, the fresh fruit, and the salads, but the desserts weren’t great. </p>
+        <p>
+          After that, we climbed into the van and headed out for the highlight of the day, which was the game drive! It lasted for about 1.5 hours and was so much fun. We got to see everything from elephants, 
+          hippos, and lions to giraffes, zebras, and springboks.          
+          After the game drive, we had some free time to hang out at the resort. We had brought our swimming costumes with us so we made full use of the beautiful infinity pool.
+          It lasted for 8-9 hours in total, but the game drive itself only lasts for around 2 hours. It really flies by! You’ve also got around 4 hours of transit time, and another 2-3 hours to eat and enjoy the resort. 
+          On the Aquila safari, you’ve technically got the chance to spot the Big Five: elephants, buffalo, lions, rhinos, and leopards. However, both times I’ve done this tour, the leopard has evaded me!
+        </p>
+        <img class="articleimage col-lg-10 col-md-9 col-sm-12 col-12 fade-in-left-3" src="./images/safariarticleelephant.jpg" >
+        <p>
+          I haven’t heard of anyone spotting one at Aquila, but I think that there are some here – they’re just famously elusive. 
+        </p>
+        <p>   
+          I also saw giraffes, hippos, springboks, and tons of zebras!
+          As I mentioned above, the experience is slightly different at different times of year. I got an extra meal during the winter but the pool was closed. It’s worth doing whatever season you’re in Cape Town for. 
+          The day tour costs R4,600. The first time I went, my friend and I visited the tour company’s head office to get a quote and the price we were given was way higher than the one we found online. 
+        </p> 
+         <p>
+          The day tour costs R4,600. The first time I went, my friend and I visited the tour company’s head office to get a quote and the price we were given was way higher than the one we found online. 
+          I can’t remember exactly what it was now, but booking online definitely saved us a fair chunk of money – over R1000, in fact!
+          Kids of all ages are welcome on the Aquila safari, but there’s no reduced rate for them. There were lots of kids on the tour both times that I did it and they seemed to be having a lot of fun. 
+          It was a fantastic experience and I genuinely had a great time. In fact, I liked it so much that I went twice!
+        </p>
+        <p>
+          However, I haven’t had the chance to do a safari elsewhere in South Africa, yet. So if you’re going to be heading off to do a real safari after you visit Cape Town, then I don’t think that the Aquila Safari would be worth doing.
+        </p>
+        <p>
+          When I did the Aquila safari with my friend Steph, she woke up on the day of the tour feeling really unwell. We gave the company a call, and they allowed us to reschedule the tour without paying a penny.
+        </p>
+        <p>
+          This was in mid January, which is peak tourist season in Cape Town, but they still managed to fit us in and made sure that we got to do the tour on a date we were happy with. So yes, I’d say you can book with confidence!
+
+          During the summer, I recommend bringing sunscreen, sunglasses, and a swimsuit so that you can make full use of the pool. We also brought our own towels to use, as well.
+
+          In the winter, it’s best to wrap up warm because you might get chilly during the game drive. Our driver gave us blankets, which were certainly welcome, but I was glad that I wore a coat and hat, too. 
+        </p>
+      <nav class="blog-pagination" aria-label="Pagination">
+        <a class="btn btn-outline-primary rounded-pill" href="#">Older</a>
+        <a class="btn btn-outline-secondary rounded-pill disabled" aria-disabled="true">Newer</a>
+      </nav>
+
+    </div>
+
+    <div class="col-md-4">
+      <div class="position-sticky" style="top: 2rem;">
+        <div class="p-4 mb-3 bg-body-tertiary rounded fade-in-right-3">
+          <h4 class="fst-italic">About</h4>
+          <p class="mb-0 fade-in-right-3">Customize this section to tell your visitors a little bit about your publication, writers, content, or something else entirely. Totally up to you.</p>
+        </div>
+
+        <div>
+          <h4 class="fst-italic">Recent posts</h4>
+          <ul class="list-unstyled">
+            <li>
+              <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+                <div class="col-lg-8">
+                  <h6 class="mb-0">Example blog post title</h6>
+                  <small class="text-body-secondary">January 15, 2024</small>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+                <div class="col-lg-8">
+                  <h6 class="mb-0">This is another blog post title</h6>
+                  <small class="text-body-secondary">January 14, 2024</small>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+                <div class="col-lg-8">
+                  <h6 class="mb-0">Longer blog post title: This one has multiple lines!</h6>
+                  <small class="text-body-secondary">January 13, 2024</small>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="p-4">
+          <h4 class="fst-italic">Archives</h4>
+          <ol class="list-unstyled mb-0">
+            <li><a href="#">March 2021</a></li>
+            <li><a href="#">February 2021</a></li>
+            <li><a href="#">January 2021</a></li>
+            <li><a href="#">December 2020</a></li>
+            <li><a href="#">November 2020</a></li>
+            <li><a href="#">October 2020</a></li>
+            <li><a href="#">September 2020</a></li>
+            <li><a href="#">August 2020</a></li>
+            <li><a href="#">July 2020</a></li>
+            <li><a href="#">June 2020</a></li>
+            <li><a href="#">May 2020</a></li>
+            <li><a href="#">April 2020</a></li>
+          </ol>
+        </div>
+
+        <div class="p-4">
+          <h4 class="fst-italic">Elsewhere</h4>
+          <ol class="list-unstyled">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Facebook</a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+  crossorigin="anonymous"></script>
+
+</body>
+</html>

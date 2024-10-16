@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Components</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+<style>
+  .articleimage{
+    margin-bottom: 75px !important;
+  }
+  p{
+    padding-left: 15px !important;
+    padding-right: 0px !important;
+    margin-right: 0px !important;
+  }
+ img{
+  padding-left: 15px !important;
+
+ }
+ BODY{
+  background-color: #dbd8e3;
+ }
+ .navbar {
+      background-color: transparent !important;
+      z-index: 1000;
+      position: relative;
+    }
+
+    .navbar-nav .nav-link,
+    .navbar-brand {
+      color: black !important;
+    }
+
+    /* BUTTON STYLES */
+    .btn {
+      background-color: #d3d6db;
+      color: black;
+    }
+
+    .btn:hover {
+      background-color: #a7bcb9;
+    }
+
+    .dropdown-item {
+      background-color: #dfcdc3;
+    }
+
+    .dropdown-divider {
+      background-color: #975a5e;
+    }
+    .heading{
+      padding-left: 30px !important;
+    }
+    @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(100px); /* Start 100px to the right */
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0); /* End at the original position */
+    }
+  }
+
+  .fade-in-right {
+    animation: fadeInRight 2s ease-out; /* Animation duration is 2 seconds */
+  }
+  .fade-in-right-3 {
+    animation: fadeInRight 3s ease-out; /* Animation duration is 2 seconds */
+  }
+  .fade-in-right-4 {
+    animation: fadeInRight 4s ease-out; /* Animation duration is 2 seconds */
+  }
+
+  @keyframes fadeInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-100px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* Class to apply the animation */
+    .fade-in-left {
+      animation: fadeInLeft 2s ease-out;
+   
+    }
+
+    .fade-in-left-3 {
+      animation: fadeInLeft 3s ease-out;
+    }
+    .fade-in-left-4 {
+      animation: fadeInLeft 4s ease-out;
+    
+    }
+    @keyframes fadeInDown {
+  from {
+    opacity: 0;                 /* Start invisible */
+    transform: translateY(-100px); /* Start 100px above its original position */
+  }
+  to {
+    opacity: 1;                 /* Fully visible */
+    transform: translateY(0);   /* End at its original position */
+  }
+}
+
+.fade-in-down {
+  animation: fadeInDown 1s ease-out; /* Animation duration is 2 seconds */
+}
+</style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg fade-in-down">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="./Homepage.ejs"> <img src="./images/airplane.svg" height="30">Voyageons Ensemble</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="./Homepage.ejs">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./Aboutus.html">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./contactus.html">Contact us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./publish.html">Publish</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Destinations
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item active" href="./Africa.html"><img src="./images/airplane-fill.svg">Africa</a></li>
+              <li><a class="dropdown-item" href="./America.html"> <img src="./images/airplane-fill.svg">America</a></li>
+              <li><a class="dropdown-item" href="./Asia.html"> <img src="./images/airplane-fill.svg">Asia</a></li>
+              <li><a class="dropdown-item" href="./Europe.html"> <img src="./images/airplane-fill.svg">Europe</a></li>
+              <li><a class="dropdown-item" href="./Oceania.html"> <img src="./images/airplane-fill.svg">Oceania</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+<div class="row g-5">
+    <div class="col-md-8">
+
+      <h3 class="heading pb-4 mb-4 fst-italic border-bottom fade-in-right-3">
+        Community publications
+      </h3>
+
+      <article class="blog-post">
+        <h2 class="heading display-5 link-body-emphasis mb-1 fade-in-right-3">Explore the enchanting beauty of Dubai in July 2024</h2>
+        
+        <p class="blog-post-meta fade-in-left-3">  by <a href="#">Aryan Sharma</a></p>
+        
+        <p>Dubai, the glittering jewel of the United Arab Emirates, transforms into a sizzling oasis during the summer months. July marks the peak of the scorching heat, yet this vibrant city continues to attract travellers with its unparalleled luxury, architectural marvels, and a kaleidoscope of experiences. Prepare to be dazzled by towering skyscrapers that pierce the sky, lavish shopping destinations, and a culinary scene that spans the globe. Despite the soaring temperatures, Dubai in July offers a plethora of indoor activities, from world-class aquariums to immersive theme parks, ensuring an unforgettable summer escape.
+             Brace yourself for a journey through this fascinating desert metropolis, where opulence meets Arabian hospitality.
+        </p>
+        <img src="./images/dubai.jpg" class="articleimage col-lg-10 col-md-9 col-sm-12 col-11 fade-in-left-3">
+
+        <p>
+         Dubai in July is sweltering, with daytime temperatures reaching 40-45°C (104-113°F) and nighttime temperatures rarely dropping below 30°C (86°F). Rain is sporadic during this month. Although the high humidity can be uncomfortable, Dubai’s modern infrastructure provides relief through air-conditioned indoor spaces and refreshing pools.
+        <br/>
+         Despite the heat, many indoor attractions and desert adventures exist, especially with enticing summer promotions. Adventurers willing to brave the extreme temperatures can still have a memorable experience in Dubai during July.
+        <br/>
+        Dubai in July offers a unique travel experience with several compelling reasons to visit. They are as follows:
+        <br/>
+        Incredibly Cheaper <br/>
+        Dubai boasts many accommodations to suit every budget throughout the year. However, travelling to Dubai in July lets you enjoy unbelievable deals like the region’s high-end hotels, resorts, and leisure attractions. This reduces the overall cost of the trip.
+        <br/>
+        Fewer Crowds <br/>
+        Dubai takes a breath from July to August, as many expats fly back to their home countries. This results in a quieter atmosphere, creating the perfect setting for a peaceful and relaxed exploration of Dubai, free from the usual chaos or hubbub.
+        <br/>
+        Eid Al Adha Festivities <br/>
+        One of the most anticipated public holidays in Dubai in July is Eid Al Adha brings a host of special activities. Celebrated with fireworks, exclusive shopping deals, and delicious treats, this significant Islamic event provides a rich cultural experience. This year, it falls on July 9 (Saturday), although there may be slight variations in the date based on moon sighting.
+        <br/>
+        Plethora of Events to Attend <br/> 
+        <img src="./images/dubai02.webp" class="articleimage col-lg-10 col-md-9 col-sm-12 col-11 fade-in-left-3">
+
+       While winter in Dubai is famous for events like the Dubai Shopping Festival, Christmas, and New Year’s Eve celebrations, the summer months are also packed with exciting events. You can enjoy remarkable events, galas, and Dubai Summer Surprises (DSS), which especially, offers a vibrant array of entertainment and activities.
+       <br/>
+       Dressing wisely during the hot summer months is essential to stay cool in Dubai. Choose light, breathable fabrics like cotton and linen in light colours to reflect the sun and avoid heat. Wear loose, comfortable clothes like flowing dresses, loose trousers, and airy tops to stay calm and stylish. Women can add wide-brimmed hats and oversized sunglasses for extra sun protection and a touch of glamour.
+       <br/>
+       Men can wear linen shirts with lightweight trousers or shorts for a bright but comfy look. They can also wear comfortable shoes like sandals or light sneakers to explore the city. Always carry a reusable water bottle to stay hydrated in the desert heat. With the right clothes, you can stay cool and enjoy your trip to Dubai in July comfortably.
+       <br/>
+       Dubai, known for its modern architecture, luxury shopping, and vibrant nightlife, offers a plethora of activities even in the sweltering heat of July. Below are some exciting things to do in Dubai in July:
+       <br/>
+       The Burj Khalifa is a must-visit for any tourist going to Dubai in July. It is a 163-floor skyscraper that holds several world records, including the tallest building in the world, the tallest free-standing structure in the world, and more. Tourists can visit the two observation decks on the 124th and 148th floors.
+       <br/>
+       The At the Top observation deck on the 124th floor offers stunning panoramic views of the Dubai cityscape. Visitors can also step outside onto an open-air platform for even more breathtaking views. The At the Top SKY observation deck on the 148th floor offers an even higher vantage point of the city. Visitors can also enjoy a multimedia presentation on Dubai’s history and the construction of Burj Khalifa.
+       <br/>
+       Dubai Garden Glow is a must-visit for a unique and unforgettable experience in Dubai in July. It’s billed as the world’s most extensive glow-in-the-dark garden, and it’s not hard to see why. The park is illuminated with millions of energy-saving bulbs and recycled luminous fabric, creating a dazzling display of light and colour.
+       <br/>
+       <img src="./images/dubai03.png" class="articleimage col-lg-10 col-md-9 col-sm-12 col-11 fade-in-left-3">
+
+      Dubai Garden Glow offers three main areas to explore: the Glow Garden, the Dinosaur Park, and the Magic Park. The Glow Garden is the show’s star, with stunning illuminated floral and animal displays. The Dinosaur Park is an excellent place for kids to learn about prehistoric creatures. At the same time, the Magic Park features optical illusions and interactive exhibits.
+      <br/>
+      Ferrari World is a popular day trip destination from the city. Located on Yas Island in Abu Dhabi, it’s the world’s largest indoor theme park dedicated to the Ferrari brand. As such, it’s a haven for car enthusiasts and thrill-seekers alike. The star attraction is the Formula One-inspired roller coaster, Flying Aces.
+      <br/>
+      When it opened in 2010, it was the fastest roller coaster in the world, and it still gives you an adrenaline rush. Other rides, shows, simulators, and even a driving course where you can get behind the wheel of a Ferrari (for an extra fee) are also available. This makes it a must-visit in Dubai in July.
+      <br/>
+      Ski Dubai is an indoor ski resort located within the Mall of the Emirates, one of the largest shopping malls in the world. At 22,500 square meters, it’s the third-largest indoor ski resort globally. Despite Dubai’s hot desert climate, Ski Dubai maintains a cool temperature of around -1 to -2 degrees Celsius year-round, offering tourists a unique winter experience.
+      <br/>
+     Beyond skiing and snowboarding, Ski Dubai offers many other activities. You can zoom down the slopes on a giant inflatable tube, interact with penguins in an interactive encounter, or take a scenic chairlift ride to admire the views. This makes it a perfect addition to your Dubai in July itinerary.
+     <br/>
+     Dubai in July is an experience like no other. The hot weather and desert scenery create a special atmosphere, along with the city’s luxurious attractions and lively nightlife. Whether you’re relaxing by the pool, shopping in the top-quality malls, or visiting the Dubai Museum, there’s something for everyone. Book your trip to Dubai today and create unforgettable memories in this fascinating city of contrasts. Don’t miss out on the chance to explore its amazing sights and enjoy its luxury!
+     <br/>
+
+
+
+
+    </p>
+ 
+        <nav class="blog-pagination" aria-label="Pagination">
+        <a class="btn btn-outline-primary rounded-pill" href="#">Older</a>
+        <a class="btn btn-outline-secondary rounded-pill disabled" aria-disabled="true">Newer</a>
+      </nav>
+
+    </div>
+
+    <div class="col-md-4">
+      <div class="position-sticky" style="top: 2rem;">
+        <div class="p-4 mb-3 bg-body-tertiary rounded fade-in-right-3">
+          <h4 class="fst-italic">About the writer</h4>
+          <p class="mb-0"> An enthusiast of both our vibrant cities & great oudoors, my life revolves around travel & adventure.
+             It's a no brainer that I have to share the wonders & secrets of my neck of the woods with other travelling souls. Enjoy the journey!
+          </p>
+        </div>
+
+        <div>
+          <h4 class="fst-italic">Recent posts</h4>
+          <ul class="list-unstyled">
+            <li>
+              <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+                <div class="col-lg-8">
+                  <h6 class="mb-0">Example blog post title</h6>
+                  <small class="text-body-secondary">January 15, 2024</small>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+                <div class="col-lg-8">
+                  <h6 class="mb-0">This is another blog post title</h6>
+                  <small class="text-body-secondary">January 14, 2024</small>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top" href="#">
+                <svg class="bd-placeholder-img" width="100%" height="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"></rect></svg>
+                <div class="col-lg-8">
+                  <h6 class="mb-0">Longer blog post title: This one has multiple lines!</h6>
+                  <small class="text-body-secondary">January 13, 2024</small>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="p-4">
+          <h4 class="fst-italic">Archives</h4>
+          <ol class="list-unstyled mb-0">
+            <li><a href="#">March 2021</a></li>
+            <li><a href="#">February 2021</a></li>
+            <li><a href="#">January 2021</a></li>
+            <li><a href="#">December 2020</a></li>
+            <li><a href="#">November 2020</a></li>
+            <li><a href="#">October 2020</a></li>
+            <li><a href="#">September 2020</a></li>
+            <li><a href="#">August 2020</a></li>
+            <li><a href="#">July 2020</a></li>
+            <li><a href="#">June 2020</a></li>
+            <li><a href="#">May 2020</a></li>
+            <li><a href="#">April 2020</a></li>
+          </ol>
+        </div>
+
+        <div class="p-4">
+          <h4 class="fst-italic">Elsewhere</h4>
+          <ol class="list-unstyled">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Facebook</a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+  crossorigin="anonymous"></script>
+
+</body>
+</html>

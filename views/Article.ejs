@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= article.title %></title>
+</head>
+<body>
+    <h1><%= article.title %></h1>
+
+    <div>
+        <p><%= article.content %></p>
+    </div>
+
+    <h2>Comments</h2>
+    <div id="comments-section">
+        <% if (comments.length > 0) { %>
+            <% comments.forEach(comment => { %>
+                <div style="border: 1px solid #ccc; margin-bottom: 10px; padding: 10px;">
+                    <strong><%= comment.username %></strong>
+                    <p><%= comment.content %></p>
+                    <small><%= new Date(comment.created_at).toLocaleString() %></small>
+                </div>
+            <% }); %>
+        <% } else { %>
+            <p>No comments yet. Be the first to comment!</p>
+        <% } %>
+    </div>
+
+    <!-- Comment Submission Form -->
+    <h3>Add a Comment</h3>
+    <form action="/article/<%= article.id %>/comment" method="POST">
+        <textarea name="content" rows="3" required placeholder="Write your comment..."></textarea><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        // Optional: JavaScript for client-side validation or dynamic interactions.
+    </script>
+</body>
+</html>

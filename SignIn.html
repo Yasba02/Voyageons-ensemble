@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Eagle+Lake&display=swap" rel="stylesheet">
+  <style>
+    form {
+      padding-left: 200px !important;
+      padding-right: 200px !important;
+      padding-top: 200px !important;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="form-signin w-100 m-auto">
+    <!-- Corrected form -->
+    <form action="/SignIn.html" method="POST">
+      <img class="mb-4" src="./images/airplane-fill.svg" alt="" width="72" height="57">
+      <h1 class="h3 mb-3 fw-normal">Please Register</h1>
+
+      <!-- Name field with 'name' attribute -->
+      <div class="form-floating">
+        <input type="text" class="form-control col-6 col-sm-5" id="floatingName" name="name" placeholder="name" required>
+        <label for="floatingName">Name</label>
+      </div>
+
+      <!-- Email field with 'name' attribute -->
+      <div class="form-floating">
+        <input type="email" class="form-control col-6 col-sm-5" id="floatingEmail" name="email" placeholder="name@example.com" required>
+        <label for="floatingEmail">Email</label>
+      </div>
+
+      <!-- Password field with 'name' attribute -->
+      <div class="form-floating">
+        <input type="password" class="form-control col-6 col-sm-5" id="floatingPassword" name="password" placeholder="password" required>
+        <label for="floatingPassword">Password</label>
+      </div>
+
+      <!-- Confirm Password field (optional, for client-side validation, but not needed on server) -->
+      <div class="form-floating">
+        <input type="password" class="form-control col-6 col-sm-5" id="floatingConfirmPassword" placeholder="Confirm Password" required>
+        <label for="floatingConfirmPassword">Confirm Password</label>
+      </div>
+
+      <div class="form-check text-start my-3">
+        <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          Remember me
+        </label>
+      </div>
+
+      <!-- Submit button -->
+      <button class="btn btn-primary w-100 py-2" type="submit">Register</button>
+    </form>
+
+    <p class="mt-5 mb-3 text-body-secondary">© 2017–2024</p>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
