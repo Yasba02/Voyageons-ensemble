@@ -56,7 +56,7 @@ function isAuthenticated(req, res, next) {
 
 // Serve the welcomepage.html at the root URL (/)
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../welcomepage.html')); // Ensure correct path to the HTML file
+    res.sendFile(path.join(__dirname, '../index.html')); // Ensure correct path to the HTML file
 });
 
 // Homepage route without fetching articles
@@ -156,7 +156,7 @@ app.post('/logout', (req, res) => {
         if (err) {
             return res.status(500).send('Failed to log out');
         }
-        res.redirect('/welcomepage.html');
+        res.redirect('/index.html');
     });
 });
 
@@ -180,7 +180,7 @@ const staticPages = [
     'Moroccoarticle', 'Milanoarticle', 'Newyorkarticle', 
     'Niagarafallsarticle', 'Parisarticle', 'Safariarticle', 
     'Switzerlandarticle', 'Aboutus.Signin', 'contactUs.Signin', 
-    'Homepage.Signin', 'Publish.Signin', 'welcomepage'
+    'Homepage.Signin', 'Publish.Signin', 'index'
 ];
 
 staticPages.forEach(page => {
@@ -290,8 +290,8 @@ app.get('/Homepage.Signin.html', (req, res) => {
 app.get('/Publish.Signin.html', (req, res) => {
     res.sendFile(path.join(__dirname, '../Publish.Signin.html')); // Ensure correct path
 });
-app.get('/welcomepage.html', (req, res) => {
-    res.sendFile(path.join(__dirname, '../welcomepage.html')); // Ensure correct path
+app.get('/index.html', (req, res) => {
+    res.sendFile(path.join(__dirname, '../index.html')); // Ensure correct path
 });
 
 // Route for Login page
