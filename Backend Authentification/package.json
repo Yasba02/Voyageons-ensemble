@@ -1,15 +1,15 @@
 {
   "name": "backend-authentification",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "Backend Authentification/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
 <<<<<<< HEAD
     "start": "node index.js",
     "build": "echo 'No build step required'"
 =======
-    "start": "node index.js",  // Start script for Render
-    "build": "echo 'No build step required'" // Optional build step; can be customized if needed
+    "start": "node Backend Authentification/index.js"// Start script for Render
+    "build": "echo 'No build step required'" 
 >>>>>>> c9ee57210b260ccb2a5259b3a392c34af693b845
   },
   "author": "yasmin seba",
@@ -29,7 +29,7 @@
 <<<<<<< HEAD
     "node": ">=14.x"
 =======
-    "node": ">=14.x" // Specify the Node.js version you want to use
+    "node": ">=14.x" 
 >>>>>>> c9ee57210b260ccb2a5259b3a392c34af693b845
   }
 }
